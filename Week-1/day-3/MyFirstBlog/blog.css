@@ -1,0 +1,102 @@
+body{
+    font-family: 'Nerko One', cursive;
+    color: #accba4;
+    text-shadow: 1px 1px black;
+    margin: 0%;
+    background-image: url(assets/christmas-colour.png);
+    background-repeat: repeat;
+    overflow: hidden;
+}
+   
+
+#header{
+    background: fixed;
+    background-color: #ffabab;
+    padding: 1px 10%;
+    border: solid #dcdcdc 5px;
+}
+img{
+    width: 100px;
+    height: 100px;
+    
+}
+.title{
+    vertical-align: middle;
+    font-size: 100px;
+    position: relative;
+    left: 10%;
+    display: inline;
+}
+.logo{
+    position: relative;
+    left: -10%;
+    top: 28px
+}
+#titlebox{
+    border: solid 1px #dcdcdc;
+    background-color: #accba4;
+    text-shadow: 1px 1px black;
+    color: #ffabab;  
+}
+#newpostsection{
+    padding: 0% 10%;
+
+}
+
+#Listingthepostsection{
+    padding: 0% 10%;
+}
+.box1{
+    margin: 5px;
+    border: solid #dcdcdc 1px;
+    width: 100%;
+    height: auto;
+    background-color: #ffabab;
+    
+}
+.box2{
+    margin: 5px;
+    border: solid #dcdcdc 1px;
+    width: 100%;
+    height: auto;
+    background-color: #ffabab;
+    
+}
+h2{
+    margin: 10px 0px 10px ;
+    color: red;
+    text-shadow: 1px 1px black;
+}
+h3{
+    margin: 0%;
+    color: red;
+    text-shadow: 1px 1px black;
+}
+.box1 h1, p{
+margin: 0%;
+}
+.box2 p, h1{
+margin: 0%;
+}
+#content{
+    margin: 1px 0px 10px;
+    width: 100%;
+    height: 100px;
+    border:solid #dcdcdc 1px;
+    background-color: #accba4;
+    color: #ffabab;
+    text-shadow: 1px 1px black;    
+}
+#Listingthepostsection p, h1{
+padding: 5px;
+
+}
+
+#submit{
+    background-color: #accba4;
+    border: solid 1px black;
+    text-shadow: 1px 1px black;
+    color: #ffabab;
+}
+
+

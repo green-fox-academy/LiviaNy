@@ -1,0 +1,64 @@
+.links{
+    text-align: right;
+    padding: 0% 15%;
+    margin: -30px;
+}
+a:link{
+    color: magenta;
+}
+a:visited{
+    color: magenta;
+}
+#intro{
+    padding:auto;
+    
+}
+h1{
+    font-size: 70px;
+    padding:10% 10% 0% 0%;
+    margin:0%;
+}
+
+h2{
+    text-align: 50px;
+}
+.title{
+
+    color: magenta;
+    font-size: 20px;
+    font-family:'Pacifico', cursive;
+    padding: 0%;
+}
+.box{
+    margin: 10px;
+    width: auto;
+    height: 70px;    
+    background-color: #333333;
+}
+
+.logo{
+    position: relative;
+    left: 10%;
+    top: 17px;
+}
+.definition{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p{
+    font-family: courier;
+    font-size: 20px;
+}
+
+.div1{
+    text-align: center;
+}
+
+#wiki{
+    padding:0%;
+}
+
+#wiki .definition{
+    text-align: center;
+    padding:auto 10%;
+}
