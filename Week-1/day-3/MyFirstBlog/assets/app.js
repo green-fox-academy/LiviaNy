@@ -11,7 +11,7 @@ particlesJS.load('particles-js', 'particles.json', function() {
 
 /* Otherwise just put the config content (json): */
 
-particlesJS('snow-fall',
+particlesJS('snowfall',
   
   {
     "particles": {
@@ -41,7 +41,7 @@ particlesJS('snow-fall',
         }
       },
       "opacity": {
-        "value": 0.8,
+        "value": 0.3,
         "random": false,
         "anim": {
           "enable": false,

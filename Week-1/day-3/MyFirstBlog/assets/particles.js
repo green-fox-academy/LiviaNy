@@ -20,7 +20,7 @@ var pJS = function(tag_id, params){
     },
     particles: {
       number: {
-        value: 1050,
+        value: 400,
         density: {
           enable: true,
           value_area: 800
@@ -45,7 +45,7 @@ var pJS = function(tag_id, params){
         }
       },
       opacity: {
-        value: 0.8,
+        value: 1,
         random: false,
         anim: {
           enable: false,
@@ -55,8 +55,8 @@ var pJS = function(tag_id, params){
         }
       },
       size: {
-        value: 3,
-        random: true,
+        value: 20,
+        random: false,
         anim: {
           enable: false,
           speed: 20,
@@ -73,8 +73,8 @@ var pJS = function(tag_id, params){
       },
       move: {
         enable: true,
-        speed: 1,
-        direction: 'bottom',
+        speed: 2,
+        direction: 'none',
         random: false,
         straight: false,
         out_mode: 'out',
@@ -91,8 +91,8 @@ var pJS = function(tag_id, params){
       detect_on: 'canvas',
       events: {
         onhover: {
-          enable: false,
-          mode: 'repulse'
+          enable: true,
+          mode: 'grab'
         },
         onclick: {
           enable: true,
