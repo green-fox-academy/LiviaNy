@@ -7,9 +7,9 @@
 //surfaceAreaMath: (a+b+c)*2
 //volumeMath: a*b*c
 
-var a:number ;
-var b:number ;
-var c:number ;
+let a1:number ;
+let b1:number ;
+let c1:number ;
 
 
 

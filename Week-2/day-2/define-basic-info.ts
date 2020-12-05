@@ -5,10 +5,10 @@
 // Your height in meters as a number
 // Whether you are married or not as a boolean
 
-var myName: string = `Livia Nyitrai`;
-var myAge: number = 29;
-var myHeightInMetre: number = 1.71;
-var Married: boolean = false;
+let myName: string = `Livia Nyitrai`;
+let myAge: number = 29;
+let myHeightInMetre: number = 1.71;
+let Married: boolean = false;
 
 console.log(`My name is: ` + myName);
 console.log(`My age is: ` + myAge);
