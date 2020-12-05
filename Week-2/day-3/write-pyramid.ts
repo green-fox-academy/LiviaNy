@@ -9,7 +9,7 @@ export{}
 // *******
 //
 // The pyramid should have as many lines as lineCount is
-let lines: number = 6;
+let lines: number = 9;
 let space:string = ` `;
 let star:string = `*`;
 
@@ -21,3 +21,4 @@ space+=` `
     space = space.substr(0,space.length - 1);
 
 }
+

@@ -1,16 +1,20 @@
-let lineCount3: number = 4;
-let star3:string = '*'
+let lines: number = 5;
+let space:string = ` `;
+let star:string = `*`;
 
-for (let i:number = 1, j:number = lineCount3 - i; i <= lineCount3; i++, j-- ){
+for(let i:number= 1; i < lines - 1; i++){
+space+=` `
+} for(let j:number = 0; j < lines - 1; j++){
+    console.log(space+star);
+    star+=`**`;
+    space = space.substr(1);
+}
 
-        let space3: string = '';
-
-for (let j:number = lineCount3 - i; j > 0; j--) {
-    space3 += ' ';
+for(let k:number= lines - 1; k > 0; k--){
+    space = space.substr(1);
+    } for(let l:number = lines - 1; l >= 0; l--){
+        console.log(space+star);
+        star = star.substr(1 ,star.length - 2) ;
+        space += ` `;
     
-}
-
-console.log(space3+star3);
-star3 += '**';
-
-}
+    }
