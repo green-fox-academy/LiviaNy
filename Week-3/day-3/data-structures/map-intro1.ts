@@ -1,7 +1,7 @@
 `use strict`
 
 //Create an empty map where the keys are integers and the values are characters
-let map:object = {
+let map: object = {
     1: `a`,
     2: `b`,
     3: `c`
@@ -37,16 +37,16 @@ console.log(map[99]);
 //Remove the key-value pair where with key 97
 delete map[97];
 //Print whether there is an associated value with key 100 or not
-    // function KeyInObject(){
-    //     if (map.hasOwnProperty(`100`) === true) {
-    //         console.log(`There is a value with key 100 in the map`);
-    //     } else if (map.hasOwnProperty(`100`) === false) {
-    //         console.log(`There is no value with key 100 in the map`);
-    //     } else {
-    //         console.log(`error`);
-    //     } 
-    // }
-    // KeyInObject()
+// function KeyInObject(){
+//     if (map.hasOwnProperty(`100`) === true) {
+//         console.log(`There is a value with key 100 in the map`);
+//     } else if (map.hasOwnProperty(`100`) === false) {
+//         console.log(`There is no value with key 100 in the map`);
+//     } else {
+//         console.log(`error`);
+//     } 
+// }
+// KeyInObject()
 if (map.hasOwnProperty(100) === true) {
     console.log(`There is a value with key 100 in the map`);
 } else if (map.hasOwnProperty(100) === false) {
@@ -54,3 +54,8 @@ if (map.hasOwnProperty(100) === true) {
 } else {
     console.log(`error`)
 }
+//Remove all the key-value pairs
+for (let key in map) {
+    delete map[key];
+}
+console.log(map);
