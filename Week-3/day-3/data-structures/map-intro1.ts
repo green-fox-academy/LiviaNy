@@ -28,3 +28,7 @@ for (let key in map) {
 }
 //Print all the values
 console.log(Object.values(map));
+//Add value D with the key 68
+map[68] = `D`;
+//Print how many key-value pairs are in the map
+console.log(Object.keys(map).length)
