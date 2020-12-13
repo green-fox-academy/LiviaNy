@@ -12,5 +12,7 @@ let map2: object = {
     // Red Panda and Moon Bear (ISBN: 978-1-60309-444-3)
     // The Lab (ISBN: 978-1-60309-461-0)
 for (const [key, value] of Object.entries(map2)){
-        console.log(`${value}` + ` (ISMB:` + `${key}` + `)`)
+        console.log(`${value}` + ` (ISMB:` + `${key}` + `)`);
     }
+//Remove the key-value pair with key 978-1-60309-444-3
+delete map2["978-1-60309-444-3"];
