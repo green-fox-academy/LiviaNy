@@ -43,3 +43,6 @@ map2["978-60309-453-5"] = `Why Did We Trust Him?`;
     } else {
         console.log(`error`)
     }
+    //Print the value associated with key 978-1-60309-453-5
+    console.log(map2["978-1-60309-453-5"]);
+    console.log(map2["978-60309-453-5"])
