@@ -32,3 +32,5 @@ console.log(Object.values(map));
 map[68] = `D`;
 //Print how many key-value pairs are in the map
 console.log(Object.keys(map).length)
+//Print the value that is associated with key 99
+console.log(map[99])
