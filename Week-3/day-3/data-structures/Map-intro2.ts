@@ -36,3 +36,10 @@ map2["978-60309-453-5"] = `Why Did We Trust Him?`;
     //         console.log(`error`);
     //     }
     // }
+    if (map2.hasOwnProperty("478-0-61159-424-8") === true) {
+        console.log(`There is value with key:478-0-61159-424-8`);
+    } else if (map2.hasOwnProperty("478-0-61159-424-8") === false) {
+        console.log(`Required key is not found`);
+    } else {
+        console.log(`error`)
+    }
