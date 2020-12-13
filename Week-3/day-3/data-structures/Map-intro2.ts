@@ -16,3 +16,12 @@ for (const [key, value] of Object.entries(map2)){
     }
 //Remove the key-value pair with key 978-1-60309-444-3
 delete map2["978-1-60309-444-3"];
+//Remove the key-value pair with value The Lab
+function GetKeyByValue(object, value) {
+    return Object.keys(map2).find(key => object[key] === value);
+}
+delete map2[GetKeyByValue(map2, `The Lab`)];
+console.log(map2);
+//Add the following key-value pairs to the map
+map2[978-60309-450-4] = `They Called Us Enemy`;
+map2[978-60309-453-5] = `Why Did We Trust Him?`;
