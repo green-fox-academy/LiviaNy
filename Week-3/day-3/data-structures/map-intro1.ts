@@ -26,3 +26,5 @@ map[67] = `C`;
 for (let key in map) {
     console.log(key);
 }
+//Print all the values
+console.log(Object.values(map));
