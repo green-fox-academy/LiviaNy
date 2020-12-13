@@ -2,7 +2,7 @@
 //Create a map where the keys are strings and the values are strings with the following initial values
 let map2: object = {
     "978-1-60309-452-8": `A letter to Jo`,
-    "978-1_60309_444_3": `Lupus`,
+    "978-1_60309_444-3": `Lupus`,
     "978-1-60309-444-3": `Red Panda and Moon Bear`,
     "978-1-60309-461-0": `The Lab`
 }
@@ -23,5 +23,16 @@ function GetKeyByValue(object, value) {
 delete map2[GetKeyByValue(map2, `The Lab`)];
 console.log(map2);
 //Add the following key-value pairs to the map
-map2[978-60309-450-4] = `They Called Us Enemy`;
-map2[978-60309-453-5] = `Why Did We Trust Him?`;
+map2["978-60309-450-4"] = `They Called Us Enemy`;
+map2["978-60309-453-5"] = `Why Did We Trust Him?`;
+//Print whether there is an associated value with key 478-0-61159-424-8 or not
+    //Solution1
+    // for(let key in map2){
+    //     if (key === "478-0-61159-424-8") {
+    //         console.log(`There is value with key:478-0-61159-424-8`);
+    //     } else if (key != "478-0-61159-424-8") {
+    //         console.log(`Required key is not found`);
+    //     } else {
+    //         console.log(`error`);
+    //     }
+    // }
