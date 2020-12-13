@@ -23,3 +23,6 @@ map[65] = `A`;
 map[66] = `B`;
 map[67] = `C`;
 //Print all the keys
+for (let key in map) {
+    console.log(key);
+}
