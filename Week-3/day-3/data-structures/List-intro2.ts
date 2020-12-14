@@ -7,7 +7,7 @@ let ListA: string[] = [`Apple`, `Avocado`, `Blueberries`, `Durian`, `Lychee`];
 //Create a new list ('List B') with the values of List A
 let ListB: string[] = /*ListA*/ [`Apple`, `Avocado`, `Blueberries`, `Durian`, `Lychee`];
 //Print out whether List A contains Durian or not
-let include = ListA.includes(`Durian`)
+let include = ListA.includes(`Durian`);
 if (include = true) {
     console.log(`ListA includes Durian`);
 } else if (include = false) {
@@ -31,9 +31,16 @@ for (let i: number = 0; i < ListB.length; i++) {
 ListA.splice(4, 0, `Kiwifruti`);
 //Compare the size of List A and List B
 if( ListA.length > ListB.length) {
-    console.log(`List A is ` + (ListA.length - ListB.length) + ` element longer than List B.`)
+    console.log(`List A is ` + (ListA.length - ListB.length) + ` element longer than List B.`);
 } else if (ListA.length < ListB.length) {
-    console.log(`List A is ` + (ListB.length - ListA.length) + ` element shorter than List B.`)
+    console.log(`List A is ` + (ListB.length - ListA.length) + ` element shorter than List B.`);
 } else {
-    console.log(`The length of the two list are equal.`)
+    console.log(`The length of the two list are equal.`);
 }
+//Get the index of Avocado from List A
+console.log(ListA.indexOf(`Avocado`));
+//Get the index of Durian from List B
+console.log(ListB.indexOf(`Durian`));
+//Add Passion Fruit and Pomelo to List B in a single statement
+ListB.push(`Passion Fruit`, `Pomelo`);
+console.log(ListB)
