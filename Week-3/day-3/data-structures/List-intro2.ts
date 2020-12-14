@@ -29,3 +29,11 @@ for (let i: number = 0; i < ListB.length; i++) {
 }
 //Add Kiwifruit to List A after the 4th element
 ListA.splice(4, 0, `Kiwifruti`);
+//Compare the size of List A and List B
+if( ListA.length > ListB.length) {
+    console.log(`List A is ` + (ListA.length - ListB.length) + ` element longer than List B.`)
+} else if (ListA.length < ListB.length) {
+    console.log(`List A is ` + (ListB.length - ListA.length) + ` element shorter than List B.`)
+} else {
+    console.log(`The length of the two list are equal.`)
+}
