@@ -5,7 +5,7 @@ import { length, link } from "../simple-replace";
 //Apple, Avocado, Blueberries, Durian, Lychee
 let ListA: string[] = [`Apple`, `Avocado`, `Blueberries`, `Durian`, `Lychee`];
 //Create a new list ('List B') with the values of List A
-let ListB: string[] = /*ListA*/ [`Apple`, `Avocado`, `Blueberries`, `Durian`, `Lychee`];
+let ListB: string[] = /*ListA*/[`Apple`, `Avocado`, `Blueberries`, `Durian`, `Lychee`];
 //Print out whether List A contains Durian or not
 let include = ListA.includes(`Durian`);
 if (include = true) {
@@ -30,7 +30,7 @@ for (let i: number = 0; i < ListB.length; i++) {
 //Add Kiwifruit to List A after the 4th element
 ListA.splice(4, 0, `Kiwifruti`);
 //Compare the size of List A and List B
-if( ListA.length > ListB.length) {
+if (ListA.length > ListB.length) {
     console.log(`List A is ` + (ListA.length - ListB.length) + ` element longer than List B.`);
 } else if (ListA.length < ListB.length) {
     console.log(`List A is ` + (ListB.length - ListA.length) + ` element shorter than List B.`);

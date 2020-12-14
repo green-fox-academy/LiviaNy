@@ -4,7 +4,7 @@
 let map: object = {
     1: `a`,
     2: `b`,
-    3: `c`
+    3: `c`,
 }
 //Print out whether the map is empty or not
 console.log(map);
@@ -52,7 +52,7 @@ if (map.hasOwnProperty(100) === true) {
 } else if (map.hasOwnProperty(100) === false) {
     console.log(`There is no value with key 100 in the map`);
 } else {
-    console.log(`error`)
+    console.log(`error`);
 }
 //Remove all the key-value pairs
 for (let key in map) {

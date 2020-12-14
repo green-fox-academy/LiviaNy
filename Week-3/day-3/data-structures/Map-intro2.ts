@@ -41,8 +41,8 @@ if (map2.hasOwnProperty("478-0-61159-424-8") === true) {
 } else if (map2.hasOwnProperty("478-0-61159-424-8") === false) {
     console.log(`Required key is not found`);
 } else {
-    console.log(`error`)
+    console.log(`error`);
 }
 //Print the value associated with key 978-1-60309-453-5
 console.log(map2["978-1-60309-453-5"]);
-console.log(map2["978-60309-453-5"])
+console.log(map2["978-60309-453-5"]);
