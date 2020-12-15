@@ -4,7 +4,7 @@ let map2: object = {
     "978-1-60309-452-8": `A letter to Jo`,
     "978-1_60309_444-3": `Lupus`,
     "978-1-60309-444-3": `Red Panda and Moon Bear`,
-    "978-1-60309-461-0": `The Lab`
+    "978-1-60309-461-0": `The Lab`,
 }
 //Print all the key-value pairs in the following format
 // A Letter to Jo (ISBN: 978-1-60309-452-8)
