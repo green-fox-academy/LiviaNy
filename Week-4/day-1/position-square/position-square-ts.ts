@@ -2,7 +2,7 @@
 
 const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d');
-export {};
+export { };
 
 // DO NOT TOUCH THE CODE ABOVE THIS LINE
 
@@ -13,15 +13,16 @@ export {};
 // Avoid code duplication.
 
 function drawSquare(x, y) {
-ctx.beginPath();
-ctx.fillStyle = `purple`
-ctx.moveTo(x, y);
-ctx.lineTo(x + 50, y),
-ctx.lineTo(x + 50, y + 50);
-ctx.lineTo(x, y + 50);
-ctx.closePath();
-ctx.fill()
+    ctx.beginPath();
+    ctx.fillStyle = `purple`
+    ctx.moveTo(x, y);
+    ctx.lineTo(x + 50, y),
+        ctx.lineTo(x + 50, y + 50);
+    ctx.lineTo(x, y + 50);
+    ctx.closePath();
+    ctx.fill()
 }
 
 drawSquare(100, 150);
 drawSquare(300, 350);
+drawSquare(500, 50);
