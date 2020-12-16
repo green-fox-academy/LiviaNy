@@ -35,8 +35,10 @@ function rightLine(x1, y1, x2, y2) {
 // rightLine(0, 60, 540, 400);
 // rightLine(0, 90, 510, 400);
 
-for (let i:number = 0; i <= 400; i + 10){
-     for( let j:number = 0; j <= 600; j + 15) {
-        rightLine(0, i, j, 400);
+for (let i:number = 0; i <= 10; i++){
+     for( let j:number = 0; j <= 10; j++) {
+        let x:number = i * 40;
+        let y:number = j * 60;
+        rightLine(0, x, y, 400);
      }
 }
