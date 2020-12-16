@@ -14,7 +14,7 @@ export { };
 
 function squareSize(size) {
     ctx.beginPath();
-    ctx.strokeStyle = `blue`;
+    ctx.strokeStyle = `cadetblue`;
     ctx.moveTo(300 - size / 2, 200 - size / 2);
     ctx.lineTo(300 - size / 2, 200 + size / 2);
     ctx.lineTo(300 + size / 2, 200 + size / 2);
@@ -24,5 +24,9 @@ function squareSize(size) {
 }
 squareSize(50);
 squareSize(100);
+squareSize(150);
 squareSize(200);
 squareSize(250);
+squareSize(300);
+squareSize(350);
+squareSize(400);
