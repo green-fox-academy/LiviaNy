@@ -14,3 +14,9 @@ ctx.strokeStyle = `green`;
 ctx.moveTo(0, 0);
 ctx.lineTo(600, 400);
 ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle = `red`;
+ctx.moveTo(600, 0);
+ctx.lineTo(0, 400);
+ctx.stroke();
