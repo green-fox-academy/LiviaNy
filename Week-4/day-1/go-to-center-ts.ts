@@ -18,8 +18,11 @@ function drawLine(x, y){
     ctx.lineTo(300, 200);
     ctx.stroke();
 }
-drawLine(0, 0);
-drawLine(0, 200);
-drawLine(0, 400);
+// drawLine(0, 0);
+// drawLine(0, 200);
+// drawLine(0, 400);
 
-
+for (let i:number = 0; i <= 10; i++){
+    let y = i * 40;
+    drawLine(0, y)
+}
