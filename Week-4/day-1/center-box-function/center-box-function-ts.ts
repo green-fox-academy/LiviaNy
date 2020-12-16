@@ -25,3 +25,4 @@ function squareSize(size) {
 squareSize(50);
 squareSize(100);
 squareSize(200);
+squareSize(250);
