@@ -12,7 +12,13 @@ export { };
 // Create a loop that fills the canvas with a rainbow of colored squares.
 let size: number = 10;
 
-
+function randomColor() {
+    const colors = ['red', 'green', 'blue', 'black', 'pink', 'magenta', 'orange', 'yellow', 'grey', 'cadetblue', 'salmon', 'teal', 'khaki', 'darkseagreen', 'coral', 'lightseagreen', `gold`, `silver`, `purple`];
+    const random01 = Math.random();
+    const random1 = (colors.length - 1) * random01;
+    const randINdex = Math.round(random1);
+    return colors[randINdex];
+}
 function rainbowSquare(size) {
     for (let i: number = 0; i < Math.floor(canvas.width / size); i++) {
         for (let j: number = 0; j < Math.floor(canvas.height / size); j++) {
