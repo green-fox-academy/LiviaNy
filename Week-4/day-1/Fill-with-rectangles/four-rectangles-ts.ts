@@ -16,3 +16,13 @@ ctx.lineTo(150, 100),
 ctx.lineTo(10, 100);
 ctx.closePath();
 ctx.fill()
+
+
+ctx.beginPath();
+ctx.fillStyle= `neon green`
+ctx.moveTo(350, 10);
+ctx.lineTo(500, 10);
+ctx.lineTo(500, 300);
+ctx.lineTo(350, 300);
+ctx.closePath();
+ctx.fill();
