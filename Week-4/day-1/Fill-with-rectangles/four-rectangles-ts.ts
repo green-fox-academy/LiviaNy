@@ -9,7 +9,8 @@ export {};
 // Draw four different size and color rectangles.
 // Avoid code duplication.
 
-ctx.beginPath()
+ctx.beginPath();
+ctx.fillStyle= `green`
 ctx.moveTo(10, 10);
 ctx.lineTo(150, 10),
 ctx.lineTo(150, 100),
@@ -19,10 +20,19 @@ ctx.fill()
 
 
 ctx.beginPath();
-ctx.fillStyle= `neon green`
+ctx.fillStyle= `pink`
 ctx.moveTo(350, 10);
 ctx.lineTo(500, 10);
 ctx.lineTo(500, 300);
 ctx.lineTo(350, 300);
+ctx.closePath();
+ctx.fill();
+
+ctx.beginPath();
+ctx.fillStyle= `turquoise`
+ctx.moveTo(10, 200);
+ctx.lineTo(160, 200);
+ctx.lineTo(160, 250);
+ctx.lineTo(10, 250);
 ctx.closePath();
 ctx.fill();
