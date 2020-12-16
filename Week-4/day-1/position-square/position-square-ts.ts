@@ -24,3 +24,4 @@ ctx.fill()
 }
 
 drawSquare(100, 150);
+drawSquare(300, 350);
