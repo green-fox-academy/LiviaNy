@@ -14,15 +14,19 @@ export { };
 
 function drawSquare(x, y) {
     ctx.beginPath();
-    ctx.fillStyle = `purple`
+    ctx.fillStyle = `purple`;
     ctx.moveTo(x, y);
-    ctx.lineTo(x + 50, y),
-        ctx.lineTo(x + 50, y + 50);
+    ctx.lineTo(x + 50, y);
+    ctx.lineTo(x + 50, y + 50);
     ctx.lineTo(x, y + 50);
     ctx.closePath();
-    ctx.fill()
+    ctx.fill();
 }
 
-drawSquare(100, 150);
-drawSquare(300, 350);
-drawSquare(500, 50);
+// drawSquare(100, 150);
+// drawSquare(300, 350);
+// drawSquare(500, 50);
+
+for (let i: number = 0; i < 3; i++) {
+    drawSquare(150 * i, 100 * i);
+}
