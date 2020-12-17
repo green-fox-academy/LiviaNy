@@ -23,6 +23,14 @@ function randomColor(){
         return grey[colorpicker];
 }
 
+for (let i:number = 0; i < 20; i++){
+        setTimeout(function () {   
+        let randomPositionX:number = (canvas.width - size) * Math.random();
+    let randomPositionY:number = (canvas.height - size) * Math.random();
+        Star(size, randomPositionX, randomPositionY);
+    }, 500 * i);
+
+
 function Star(size:number, positionX:number, positionY:number){
     ctx.beginPath();
     ctx.fillStyle = randomColor();;
