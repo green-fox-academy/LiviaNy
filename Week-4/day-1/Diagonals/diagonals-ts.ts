@@ -9,17 +9,17 @@ export { };
 // Draw the canvas' diagonals.
 // If it starts from the upper-left corner it should be green, otherwise it should be red.
 
-// ctx.beginPath();
-// ctx.strokeStyle = `green`;
-// ctx.moveTo(0, 0);
-// ctx.lineTo(600, 400);
-// ctx.stroke();
+ctx.beginPath();
+ctx.strokeStyle = `green`;
+ctx.moveTo(0, 0);
+ctx.lineTo(600, 400);
+ctx.stroke();
 
-// ctx.beginPath();
-// ctx.strokeStyle = `red`;
-// ctx.moveTo(600, 0);
-// ctx.lineTo(0, 400);
-// ctx.stroke();
+ctx.beginPath();
+ctx.strokeStyle = `red`;
+ctx.moveTo(600, 0);
+ctx.lineTo(0, 400);
+ctx.stroke();
 
 function rightLine(x1, y1, x2, y2) {
     ctx.beginPath();
@@ -30,15 +30,15 @@ function rightLine(x1, y1, x2, y2) {
 }
 
 
-// rightLine(0, 0, 600, 400);
-// rightLine(0, 30, 570, 400),
-// rightLine(0, 60, 540, 400);
-// rightLine(0, 90, 510, 400);
+rightLine(0, 0, 600, 400);
+rightLine(0, 30, 570, 400);
+rightLine(0, 60, 540, 400);
+rightLine(0, 90, 510, 400);
 
-for (let i:number = 0; i <= 10; i++){
-     for( let j:number = 0; j <= 10; j++) {
-        let x:number = i * 40;
-        let y:number = j * 60;
-        rightLine(0, x, y, 400);
-     }
-}
+// for (let i:number = 0; i <= 10; i++){
+//      for( let j:number = 0; j <= 10; j++) {
+//         let x:number = i * 40;
+//         let y:number = j * 60;
+//         rightLine(0, x, y, 400);
+//      }
+// }

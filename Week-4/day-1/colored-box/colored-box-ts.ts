@@ -2,7 +2,7 @@
 
 const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d');
-export {};
+export { };
 
 // DO NOT TOUCH THE CODE ABOVE THIS LINE
 
@@ -18,16 +18,16 @@ ctx.beginPath();
 ctx.strokeStyle = `green`;
 ctx.moveTo(250, 250);
 ctx.lineTo(350, 250);
-ctx.stroke()
+ctx.stroke();
 
-ctx.beginPath()
+ctx.beginPath();
 ctx.strokeStyle = `blue`;
 ctx.moveTo(350, 250);
 ctx.lineTo(350, 150);
-ctx.stroke()
+ctx.stroke();
 
-ctx.beginPath()
+ctx.beginPath();
 ctx.strokeStyle = `pink`;
 ctx.moveTo(350, 150);
 ctx.lineTo(250, 150);
-ctx.stroke()
+ctx.stroke();

@@ -10,17 +10,17 @@ export { };
 // Avoid code duplication.
 
 ctx.beginPath();
-ctx.fillStyle = `magenta`
+ctx.fillStyle = `magenta`;
 ctx.moveTo(10, 10);
-ctx.lineTo(150, 10),
-    ctx.lineTo(150, 100),
-    ctx.lineTo(10, 100);
+ctx.lineTo(150, 10);
+ctx.lineTo(150, 100);
+ctx.lineTo(10, 100);
 ctx.closePath();
 ctx.fill()
 
 
 ctx.beginPath();
-ctx.fillStyle = `pink`
+ctx.fillStyle = `pink`;
 ctx.moveTo(350, 10);
 ctx.lineTo(500, 10);
 ctx.lineTo(500, 300);
@@ -29,7 +29,7 @@ ctx.closePath();
 ctx.fill();
 
 ctx.beginPath();
-ctx.fillStyle = `turquoise`
+ctx.fillStyle = `turquoise`;
 ctx.moveTo(10, 200);
 ctx.lineTo(160, 200);
 ctx.lineTo(160, 250);
@@ -38,7 +38,7 @@ ctx.closePath();
 ctx.fill();
 
 ctx.beginPath();
-ctx.fillStyle = `cyan`
+ctx.fillStyle = `cyan`;
 ctx.moveTo(170, 10);
 ctx.lineTo(300, 10);
 ctx.lineTo(300, 350);
