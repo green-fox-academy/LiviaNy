@@ -11,14 +11,14 @@ export { };
 // and draws a 50 long horizontal line from that point.
 // Draw at least 3 lines with that function using a loop.
 
-function drawLine(x, y) {
+function drawLine(x: number, y: number) {
     ctx.beginPath();
     ctx.strokeStyle = `green`;
     ctx.moveTo(x, y);
     ctx.lineTo(x + 50, y);
     ctx.stroke()
 }
-for (let i: number = 1; i <= 10; i++) {
+for (let i: number = 0; i < canvas.height; i++) {
     let y: number = i * 40;
     drawLine(50, y);
 }
