@@ -27,8 +27,8 @@ function randomColor() {
 
 for (let i: number = 0; i < 20; i++) {
     setTimeout(function () {
-        let randomPositionX: number = (canvas.width - size) * Math.random();
-        let randomPositionY: number = (canvas.height - size) * Math.random();
+        let randomPositionX: number = (canvas.width - (size + size/ 2)) * Math.random();
+        let randomPositionY: number = (canvas.height - (size + size/2)) * Math.random();
         Star(size, randomPositionX, randomPositionY);
     }, 500 * i);
 
@@ -43,7 +43,7 @@ for (let i: number = 0; i < 20; i++) {
         ctx.lineWidth = size / 6;
         ctx.fillRect(positionX, positionY, size, size);
         ctx.moveTo(positionX + size / 2, positionY - size / 2);
-        let diagonal: number = Math.sqrt(size * size + size * size);
+        //let diagonal: number = Math.sqrt(size * size + size * size);
         ctx.lineTo(positionX + size / 2, positionY + size + (size / 2));
         //ctx.moveTo(positionX + size/2, positionY - size/2);
         ctx.moveTo(positionX - size / 2, positionY + size / 2);
