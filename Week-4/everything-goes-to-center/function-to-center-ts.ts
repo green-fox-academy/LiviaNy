@@ -19,3 +19,7 @@ function drawLine (x, y){
 }
 
 
+for(let y:number = 1; y < canvas.height / 20; y ++){
+    drawLine(0, y* 20)
+    drawLine(600, y* 20)
+}
