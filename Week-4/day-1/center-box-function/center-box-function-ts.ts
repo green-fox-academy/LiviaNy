@@ -22,11 +22,17 @@ function squareSize(size) {
     ctx.closePath();
     ctx.stroke();
 }
-squareSize(50);
-squareSize(100);
-squareSize(150);
-squareSize(200);
-squareSize(250);
-squareSize(300);
-squareSize(350);
-squareSize(400);
+// squareSize(50);
+// squareSize(100);
+// squareSize(150);
+// squareSize(200);
+// squareSize(250);
+// squareSize(300);
+// squareSize(350);
+// squareSize(400);
+
+
+let size: number = 15;
+for (let i: number = 0; i < canvas.height / size; i++) {
+    squareSize(size * i);
+}
