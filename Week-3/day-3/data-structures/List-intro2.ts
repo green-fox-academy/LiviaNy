@@ -44,4 +44,4 @@ console.log(ListB.indexOf(`Durian`));
 //Add Passion Fruit and Pomelo to List B in a single statement
 ListB.push(`Passion Fruit`, `Pomelo`);
 //Print out the 3rd element from List A
-ListA[2];
+console.log(ListA[2]);
