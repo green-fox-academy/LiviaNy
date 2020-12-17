@@ -8,8 +8,8 @@ export {};
 
 // Reproduce this:
 // [https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/drawing/assets/r3.png]
-let size:number = 100;
-let squareDiameter:number = Math.sqrt(Math.pow(size, 2) + Math.pow(size, 2));
+let size:number = 10;
+//let squareDiameter:number = Math.sqrt(size * size + size * size);
 let strokeWitdth:number = 2;
 
 function square(){
@@ -18,14 +18,15 @@ function square(){
     ctx.beginPath();
     ctx.strokeStyle = `black`;
     ctx.lineWidth = strokeWitdth;
-    ctx.strokeRect(size + (i -1) * size, size + (i -1) * size, size, size);
+    ctx.strokeRect(size + strokeWitdth + (i -1) * (size + strokeWitdth), size + strokeWitdth + (i -1) * (size + strokeWitdth), size, size);
     ctx.fillStyle = `purple`;
-    ctx.fillRect(size + (i -1) * size, size + (i -1) * size, size, size);
+    ctx.fillRect(size + strokeWitdth + (i -1) * (size + strokeWitdth), size + strokeWitdth + (i -1) * (size + strokeWitdth), size, size);
         // ctx.moveTo((squareDiameter + strokeWitdth) * i, (squareDiameter + strokeWitdth) * i);
         // ctx.lineTo((squareDiameter + strokeWitdth) + (squareDiameter + strokeWitdth) * i, (squareDiameter + strokeWitdth) * i);
         // ctx.lineTo((squareDiameter + strokeWitdth) + (squareDiameter + strokeWitdth) * i, (squareDiameter + strokeWitdth) + (squareDiameter + strokeWitdth) * i);
         // ctx.lineTo((squareDiameter + strokeWitdth) * i, (squareDiameter + strokeWitdth) + (squareDiameter + strokeWitdth) * i);
         // ctx.closePath();
+
 }
 }
 
