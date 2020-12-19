@@ -15,7 +15,8 @@ function drawLines(x, y, x1, y1) {
 }
 
 for (let i: number = 0; i < canvas.height; i++) {
-    let x: number = i * canvas.height / (distance - 1);
-    let y: number = i * canvas.width / (distance - 1);
+    let x: number = i * canvas.width / (distance - 1);
+    let y: number = i * canvas.height / (distance - 1);
     drawLines(0, x, y, canvas.height);
+    drawLines(x, 0, canvas.width, y);
 }
