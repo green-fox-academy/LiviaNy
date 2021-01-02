@@ -4,12 +4,10 @@
 //     -  Greeting is printing e.g. `Greetings, dear Green Fox`
 // -  Greet `nameToGreet`
 
-let nameToGreet:string = `Green Fox`;
+let nameToGreet: string = `Green Fox`;
 
-function greet(nameToGreet) {
-
-    console.log(`Greetings, dear ` + nameToGreet);
-   
+function greet(name) {
+    console.log(`Greetings, dear ` + name);
 }
 
 greet(nameToGreet);

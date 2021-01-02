@@ -2,8 +2,8 @@
 //    which logs to the console the input parameters
 //    (can have multiple number of arguments)
 
-function printParams(...input:any){
+function printParams(...input: any) {
     console.log(input);
 }
 
-printParams(`i`, `will`, `print`, `411`)
+printParams(`i`, `will`, `print`, `411`);

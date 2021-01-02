@@ -5,6 +5,6 @@ function calculateFactorial(i: number) {
     for (let j: number = 1; j <= input; j++) {
         input *= i;
     }
-    return input
+    return input;
 }
-console.log(calculateFactorial(input))
+console.log(calculateFactorial(input));
