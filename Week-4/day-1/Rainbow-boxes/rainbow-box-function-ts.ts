@@ -10,7 +10,7 @@ export { };
 // The square size, and the fill color,
 // and draws a square of that size and color to the center of the canvas.
 // Create a loop that fills the canvas with a rainbow of colored squares.
-let size: number = 10;
+let size: number = 30;
 
 function randomColor() {
     const colors = ['red', 'green', 'blue', 'black', 'pink', 'magenta', 'orange', 'yellow', 'grey', 'cadetblue', 'salmon', 'teal', 'khaki', 'darkseagreen', 'coral', 'lightseagreen', `gold`, `silver`, `purple`];
