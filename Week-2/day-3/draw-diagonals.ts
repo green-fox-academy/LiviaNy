@@ -11,20 +11,23 @@
 // %%%%%%
 //
 // The square should have as many lines as lineCount is
-
-let line6: number = 4;
-let percent5: string = `%`;
-for (let i: number = 0; i < line6; i++) {
-    percent5 += `%`;
-} console.log(percent5);
-
-let space6: string = ` `;
-let percent6: string = `%`
-for (let i: number = 1; i < line6; i++) {
-    percent6 += `%` + ` `;
-    percent6 = percent6.substr(1, percent6.length);
-    
-    space6 = space6.substr(0, space6.length - 1);
-    console.log(`%` + space6 + percent6 + `%`);
-    space6 += space6
+let lineCount: number = 10;
+let line: string = ``;
+let space2: string = ``;
+for (let i: number = 0; i < lineCount; i++) {
+    line += `%`;
 }
+for (let j: number = 0; j < lineCount - 3; j++) {
+    space2 = space2 += ` `;
+}
+let line2: string = `%`;
+let line3: string = `%`;
+
+console.log(line);
+let space: string = ``;
+for (let i: number = 0; i < lineCount - 2; i++) {
+    console.log(line2 + space + line3 + space2 + line2);
+    space += ` `;
+    space2 = space2.substr(1, lineCount - 1);
+}
+console.log(line);

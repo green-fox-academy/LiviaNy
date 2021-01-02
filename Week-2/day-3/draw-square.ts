@@ -14,8 +14,6 @@ let line: string = `%%%%%%`
 let line2: string = `%    %`
 
 for (let i: number = 1; i <= lineCount5; i++) {
-
-
     if (i === 1 || i === lineCount5) {
         console.log(line);
     } else {
