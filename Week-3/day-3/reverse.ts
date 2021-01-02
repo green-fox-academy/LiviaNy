@@ -14,7 +14,7 @@ let toBeReversed: string = `.eslaf eb t'ndluow ecnetnes siht ,dehctiws erew esla
 //  }
 //  }
 
-function reverse(x){
+function reverse(x) {
     x = x.split(``);
     x.reverse();
     return x = x.join(``);

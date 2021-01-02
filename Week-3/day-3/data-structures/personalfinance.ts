@@ -17,4 +17,4 @@ function app() {
     console.log(`Your average sending was: ` + ((expenses.reduce((a, b) => a + b) / expenses.length)));
     return ``
 }
-console.log(app())
+console.log(app());

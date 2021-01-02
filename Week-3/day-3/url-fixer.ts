@@ -5,7 +5,7 @@
 let url: string = 'https//www.reddit.com/r/nevertellmethebots';
 //console.log(url.length)
 url = url.slice(0, 38) + `odds`;
-url = url.slice(5),
-    url = `http:` + url
+url = url.slice(5);
+url = `http:` + url;
 console.log(url);
 

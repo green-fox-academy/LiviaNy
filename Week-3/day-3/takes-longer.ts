@@ -6,7 +6,7 @@ let quote: string = `Hofstadter's Law: It you expect, even when you take into ac
 
 let quote1 = quote.split(`It`);
 quote1.splice(1, 0, `always takes longer than`);
-quote = quote1.join(`It `)
+quote = quote1.join(`It `);
 
 
 console.log(quote);

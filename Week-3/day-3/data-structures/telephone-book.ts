@@ -56,4 +56,4 @@ function app(name: string, number: string, include: string) {
         console.log(`error`);
     }
 }
-app(`John K. Miller`, `307-687-2982`, `Chris E. Myers`)
+app(`John K. Miller`, `307-687-2982`, `Chris E. Myers`);

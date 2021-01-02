@@ -1,7 +1,7 @@
 import { indexOf } from "../simple-replace";
 
 //Create an empty list which will contain names (strings)
-let list: string[] = []
+let list: string[] = [];
 //Print out the number of elements in the list
 console.log(list.length);
 //Add William to the list
