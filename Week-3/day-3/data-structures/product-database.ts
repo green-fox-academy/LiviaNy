@@ -25,9 +25,8 @@ let products: object = {
 // How many products' price is below 300?
 // Is there anything we can buy for exactly 125?
 // What is the cheapest product?
-function solvingApp(price) {
+function solvingApp(price: string) {
     console.log(`The price is: ` + products[price]);
-    
 }
 
-solvingApp(`Fish`)
+solvingApp(`Fish`);
