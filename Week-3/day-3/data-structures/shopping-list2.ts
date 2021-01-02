@@ -58,13 +58,11 @@ let alicesShoppingList:object = {
 // Create an application which solves the following problems.
 
 // How much does Bob pay?
+let bobTotal:number = 0;
+
 // How much does Alice pay?
 // Who buys more Rice?
 // Who buys more Potato?
 // Who buys more different products?
 // Who buys more products? (piece)
 
-function listApp(){
-    
-}
-listApp()

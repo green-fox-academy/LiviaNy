@@ -3,15 +3,15 @@
 // -  Print the fourth element as a test
 
 
-let numbers: number[] = [1, 2, 3, 8, 5, 6]
+let numbers: number[] = [1, 2, 3, 8, 5, 6];
 
 function changer(x) {
   if (x === 8) {
-    return x = 4
+    return x = 4;
   } else {
     return x;
   }
 }
 numbers = numbers.map(changer);
 
-console.log(numbers[3])
+console.log(numbers[3]);

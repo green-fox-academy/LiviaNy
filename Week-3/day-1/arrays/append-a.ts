@@ -5,6 +5,6 @@
 //
 // -  Add all elements an `"a"` at the end
 
-let animals:string[] = [`koal`, `pand`, `zebr`, `anacond`, `bo`, `chincill`, `cobr`, `gorill`, `hyen`, `hydr`, `iguan`, `impal`, `pum`, `tarantul`, `pirahn`];
+let animals: string[] = [`koal`, `pand`, `zebr`, `anacond`, `bo`, `chincill`, `cobr`, `gorill`, `hyen`, `hydr`, `iguan`, `impal`, `pum`, `tarantul`, `pirahn`];
 animals = animals.map(a => a += `a`);
-console.log(animals)
+console.log(animals);
