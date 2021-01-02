@@ -1,5 +1,6 @@
-let number: number = 15;
+'use strict';
 
+let number: number = 15;
 // Create a program that
 // prints the multiplication table with number
 //
@@ -17,6 +18,6 @@ let number: number = 15;
 // 9 * 15 = 135
 // 10 * 15 = 150
 
-for (let i:number = 1; i < 11; i++){
+for (let i: number = 1; i < 11; i++) {
     console.log(i + ` * ` + number + ` = ` + (i * number));
 }

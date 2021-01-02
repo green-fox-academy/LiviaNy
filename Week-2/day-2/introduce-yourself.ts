@@ -13,6 +13,6 @@ let myName: string = `Livia Nyitrai`;
 let age: number = 29;
 let height: number = 1.71;
 
-console.log(myName) 
-console.log(age)
-console.log(height)
+console.log(myName);
+console.log(age);
+console.log(height);

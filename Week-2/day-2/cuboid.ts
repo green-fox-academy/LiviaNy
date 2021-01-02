@@ -7,9 +7,13 @@
 //surfaceAreaMath: (a+b+c)*2
 //volumeMath: a*b*c
 
-let a1:number ;
-let b1:number ;
-let c1:number ;
+let a: number = 10.1;
+let b: number = 11.2;
+let c: number = 12.3;
 
+let surfaceArea: number = (a + b + c) * 2;
+let volume: number = a * b * c;
 
+console.log(`Surface Area: ` + surfaceArea.toFixed(2));
+console.log(`Volume: ` + volume.toFixed(2));
 
