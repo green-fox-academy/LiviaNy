@@ -14,7 +14,7 @@ let baseNumber: number = 123;
 // doubleNumber(baseNumber);
 
 let doubleNumber: (x: number) => void = function (
-    x;
+    x
 ) {
     return console.log(x * 2);
 }
