@@ -6,8 +6,15 @@
 
 let nameToGreet: string = `Green Fox`;
 
-function greet(name) {
-    console.log(`Greetings, dear ` + name);
+// function greet(name) {
+//     console.log(`Greetings, dear ` + name);
+// }
+
+// greet(nameToGreet);
+
+let greeter: (name: string) => void = function (
+    name: string) {
+    return console.log(`Greetings, dear ` + name);
 }
 
-greet(nameToGreet);
+greeter(nameToGreet);
