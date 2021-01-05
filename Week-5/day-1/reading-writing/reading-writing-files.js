@@ -1,4 +1,5 @@
 let fs = require(`fs`);
 
-let readMe = fs.readFileSync(`readme.txt`, `utf8`);
-fs.writeFileSync(`writeMe.txt`, readMe);
+fs.readFile(`readme.txt`, `utf8`, function(err, data){
+    console.log(data);
+});
