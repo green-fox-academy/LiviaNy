@@ -1,10 +1,14 @@
 // - Create a function called `calculateFactorial()`
 //   that returns the factorial of its input
-let input: number = 2
-function calculateFactorial(i: number) {
-    for (let j: number = 1; j <= input; j++) {
-        input *= i;
+let input: number = 7;
+
+function calculateFactorial(i: number): any {
+    if (i > 1) {
+        return i * calculateFactorial(i - 1);
+    } else if (i < 0) {
+        return `Require positive number`;
+    } else {
+        return 1;
     }
-    return input;
 }
 console.log(calculateFactorial(input));
