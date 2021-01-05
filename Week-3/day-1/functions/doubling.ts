@@ -6,9 +6,17 @@
 
 let baseNumber: number = 123;
 
-function doubleNumber(baseNumber) {
-    console.log(baseNumber * 2);
-    return baseNumber;
+// function doubleNumber(baseNumber) {
+//     console.log(baseNumber * 2);
+//     return baseNumber;
+// }
+
+// doubleNumber(baseNumber);
+
+let doubleNumber: (x: number) => void = function (
+    x;
+) {
+    return console.log(x * 2);
 }
 
 doubleNumber(baseNumber);
