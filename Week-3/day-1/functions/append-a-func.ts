@@ -6,8 +6,16 @@
 
 let typo: string = `Chincill`;
 
-function appendA(input: string) {
-    return input + `a`;
+// function appendA(input: string) {
+//     return input + `a`;
+// }
+
+// console.log(appendA(typo));
+
+let appendA: (typo: String) => void = function (
+    typo
+) {
+    return console.log(typo + `a`);
 }
 
-console.log(appendA(typo));
+appendA(typo);
