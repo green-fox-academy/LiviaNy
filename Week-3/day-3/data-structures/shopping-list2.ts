@@ -56,10 +56,10 @@ let alicesShoppingList:object = {
 "Tomato": 10,
 }
 // Create an application which solves the following problems.
-
+function totalToSpend(listOwner){
+    let totalSpent: number = 0;
 // How much does Bob pay?
-let bobTotal:number = 0;
-
+Object.keys
 // How much does Alice pay?
 // Who buys more Rice?
 // Who buys more Potato?

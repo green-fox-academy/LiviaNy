@@ -1,6 +1,6 @@
 `use strict`
 
-let lineCount: number = 7;
+let lineCount: number = 8;
 let space5: string = ` `;
 let star: string = `*`;
 

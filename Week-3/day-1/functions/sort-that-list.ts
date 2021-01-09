@@ -11,7 +11,7 @@
 //console.log(advancedBubble([34, 12, 24, 9, 5], true));
 //  should print [34, 24, 12, 9, 5]
 let array: number[] = [34, 12, 24, 9, 5];
-function bubble(arr, boolean: boolean) {
+function bubble(arr: any, boolean: boolean) {
     for (let i: number = 0; i < arr.length; i++) {
         for (let j: number = 0; j < arr.length; j++) {
             if (boolean === true) {
@@ -26,7 +26,6 @@ function bubble(arr, boolean: boolean) {
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
                     {
-
                     }
                 }
             }
