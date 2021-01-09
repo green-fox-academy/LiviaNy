@@ -1,3 +1,8 @@
+// Create a function that takes a number
+// divides ten with it,
+// and prints the result.
+// It should print 'Cannot divide by zero!' if the parameter is 0
+
 let divider: (input: number) => void = function (
     input
 ) {
