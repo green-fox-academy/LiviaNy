@@ -1,4 +1,4 @@
-let divider: (input: number) => any = function (
+let divider: (input: number) => void = function (
     input
 ) {
     if (input > 0) {
