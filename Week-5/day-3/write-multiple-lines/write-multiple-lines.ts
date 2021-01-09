@@ -17,4 +17,8 @@ function writeIntoFiles(path: string, word: string, number: number): void {
   }
 }
 
-writeIntoFiles(`my-file.txt`, `Livia`, 6);
+try {
+  writeIntoFiles(`my-file.txt`, `apple`, 6);
+} catch {
+  console.log(`Something went wring`);
+}

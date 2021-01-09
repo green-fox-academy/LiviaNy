@@ -9,13 +9,12 @@ import { fileURLToPath } from "url";
 
 let fs = require(`fs`);
 
-function fileWriter(content: string) {
-    try {
-        fs.writeFileSync(`my-file.txt`, content);
-    }
-    catch {
-        console.log(`Unable to write file: my-file.txt`);
-    }
+function fileWriter(content: string): void {
+  try {
+    fs.writeFileSync(`my-file.txt`, content);
+  } catch {
+    console.log(`Unable to write file: my-file.txt`);
+  }
 }
 
 fileWriter(`Livia Nyitrai`);
