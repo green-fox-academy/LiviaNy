@@ -6,8 +6,14 @@ let divider: (input: number) => any = function (
     } else if (input < 0) {
         console.log(input / 10);
     } else {
-        console.log(`Can not divide by 0!`);
+        throw Error(`Can not divide by 0!`);
+        ;
     }
 }
 
-divider(0);
+try {
+    divider(-100);
+}
+catch (err) {
+    console.log(err.message);
+}
