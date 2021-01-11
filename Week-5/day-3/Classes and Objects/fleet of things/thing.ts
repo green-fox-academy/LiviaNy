@@ -1,4 +1,4 @@
-class Thing {
+export class Thing {
     private name: string;
     private completed: boolean;
   
@@ -23,4 +23,4 @@ class Thing {
     }
   }
   
-  export { Thing };
+  // export { Thing };

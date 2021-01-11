@@ -1,7 +1,7 @@
 
 import { Thing } from './thing';
 
-class Fleet {
+export class Fleet {
   private things: Thing[];
 
   constructor() {
@@ -23,4 +23,4 @@ class Fleet {
   }
 }
 
-export { Fleet };
+// export { Fleet };
