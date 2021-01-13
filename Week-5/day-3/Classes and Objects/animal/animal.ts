@@ -6,9 +6,13 @@
 // Every animal can drink() which decreases their thirst by one
 // Every animal can play() which increases both by one
 
-class Animal {
+export class Animal {
+  type: string
   hunger: number = 5;
   thirst: number = 5;
+constructor(type:string){
+  this.type = type
+}
   eat(): void {
     this.hunger--;
   }
@@ -21,7 +25,7 @@ class Animal {
   }
 }
 
-const Jumpy = new Animal();
+const Jumpy = new Animal(`Jumpy`);
 Jumpy.play();
 console.log(Jumpy);
 Jumpy.drink();
