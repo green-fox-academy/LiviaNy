@@ -21,7 +21,7 @@ class SharpieSet {
         usableSharpies++;
       }
     }
-    console.log(`TYou have ` + usableSharpies + ` sharpie felt.`);
+    console.log(`You have ` + usableSharpies + ` sharpie felt.`);
   }
 
   removeTrash(): void {

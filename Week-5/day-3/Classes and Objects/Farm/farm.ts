@@ -23,7 +23,7 @@ class Farm {
       console.log(`error`);
     }
   }
-  slaughter() {
+  slaughter(): void {
     let hunger: number[] = [];
     for (let i: number = 0; i < this.animals.length; i++) {
       hunger.push(this.animals[i].hunger);
@@ -52,5 +52,6 @@ dog.play();
 cat.play();
 dog.play();
 bird.play();
+console.log(theFarm);
 theFarm.slaughter();
 console.log(theFarm);
