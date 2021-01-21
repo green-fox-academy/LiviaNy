@@ -44,15 +44,6 @@ class Students extends Person {
   }
 }
 
-class Mentor extends Person {
-  _level: string;
-
-  constructor(name: string, age: number, gender: string, level: string) {
-    super(name, age, gender);
-    this._level = level ?? `intermediate`;
-  }
-}
-
 const livia = new Students(`Livia`, 29, `female`, `GreenFox Academy`);
 
 livia.introduce();
