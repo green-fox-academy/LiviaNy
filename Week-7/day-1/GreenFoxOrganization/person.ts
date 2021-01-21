@@ -47,17 +47,42 @@ class Students extends Person {
 class Mentor extends Person {
   _level: string;
 
-  constructor(name: string, age: number, gender: string, level: string) {
+  constructor(name?: string, age?: number, gender?: string, level?: string) {
     super(name, age, gender);
     this._level = level ?? `intermediate`;
   }
 
-  getGoal() {
+  getGoal(): void {
     console.log(`My goal is: Educate brilliant junior software developers.`);
   }
 
-  introduce() {
+  introduce(): void {
     console.log(`Hi, I\`m ${this._name}, a ${thi._age} year old ${this._gender} ${this._level} mentor.`);
+  }
+}
+
+class Sponsor extends Person {
+  _company: string;
+  _hiredStudents: number;
+
+  constructor(name?: string, age?: number, gender?: string, company?: string) {
+    super(name, age, gender);
+    this._hiredStudents = 0;
+    this._company = company ?? `Google`;
+  }
+
+  introduce(): void {
+    console.log(
+      `Hi, I\`m ${this._name}, a ${this._age} year old ${this._gender} who represents ${this._company} and hired ${this._hiredStudents} students so far.`
+    );
+  }
+
+  hire(): void {
+    this._hiredStudents++;
+  }
+
+  getGoal() {
+    console.log(`My goal is: Hire brilliant junior software developers.`);
   }
 }
 const livia = new Students(`Livia`, 29, `female`, `GreenFox Academy`);
