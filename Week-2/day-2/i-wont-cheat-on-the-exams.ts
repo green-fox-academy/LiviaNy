@@ -5,6 +5,6 @@
 
 let i: number = 0;
 while (i < 100) {
-    console.log(`I won\`t cheat on exams!`);
-    i++;
+  console.log(`I won\`t cheat on exams!`);
+  i++;
 }

@@ -3,5 +3,4 @@ let heightInM: number = 1.78;
 let BMI: number;
 // Print the Body mass index (BMI) based on these values
 
-
-console.log((BMI = (massInKg / (heightInM * heightInM))).toFixed(2));
+console.log((BMI = massInKg / (heightInM * heightInM)).toFixed(2));

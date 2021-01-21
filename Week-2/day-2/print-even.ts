@@ -3,8 +3,8 @@
 
 let evens: number = 0;
 while (evens < 501) {
-    if (evens % 2 == 0) {
-        console.log(evens);
-    }
-    evens++;
+  if (evens % 2 == 0) {
+    console.log(evens);
+  }
+  evens++;
 }

@@ -5,8 +5,10 @@
 
 let names: string[] = [`Arthur`, `Boe`, `Chloe`];
 
-names[0] = `Chloe`;
-names[2] = `Arthur`;
+// names[0] = `Chloe`;
+// names[2] = `Arthur`;
+// console.log(names);
+
+names.reverse();
+
 console.log(names);
-
-

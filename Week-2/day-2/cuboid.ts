@@ -16,4 +16,3 @@ let volume: number = a * b * c;
 
 console.log(`Surface Area: ` + surfaceArea.toFixed(2));
 console.log(`Volume: ` + volume.toFixed(2));
-

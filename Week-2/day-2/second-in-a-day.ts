@@ -6,7 +6,7 @@ let currentSeconds: number = 42;
 
 // Write a program that prints the remaining seconds (as an integer) from a
 // day if the current time is represented by these variables
-let totalCurrentSeconds: number = (currentHours * 3600) + (currentMinutes * 60) + currentSeconds;
+let totalCurrentSeconds: number = currentHours * 3600 + currentMinutes * 60 + currentSeconds;
 console.log(totalCurrentSeconds);
 let SecondsInDay: number = 24 * 3600;
 

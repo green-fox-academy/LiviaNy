@@ -13,4 +13,4 @@ console.log(semester * 5 * codingHours);
 // Print the percentage of the coding hours in the semester if the average
 // work hours weekly is 52
 //
-console.log(((codingHours * 5 * 17) / (avWorkingHours * 17) * 100).toFixed(2) + `%`);
+console.log((((codingHours * 5 * 17) / (avWorkingHours * 17)) * 100).toFixed(2) + `%`);
