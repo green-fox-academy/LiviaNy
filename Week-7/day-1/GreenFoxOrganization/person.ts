@@ -20,7 +20,7 @@ class Person {
   }
 }
 
-class Students extends Person {
+class Student extends Person {
   _previousOrganization: string;
   _skippedDays: number = 0;
 
@@ -57,7 +57,7 @@ class Mentor extends Person {
   }
 
   introduce(): void {
-    console.log(`Hi, I\`m ${this._name}, a ${thi._age} year old ${this._gender} ${this._level} mentor.`);
+    console.log(`Hi, I\`m ${this._name}, a ${this._age} year old ${this._gender} ${this._level} mentor.`);
   }
 }
 
@@ -85,6 +85,27 @@ class Sponsor extends Person {
     console.log(`My goal is: Hire brilliant junior software developers.`);
   }
 }
-const livia = new Students(`Livia`, 29, `female`, `GreenFox Academy`);
 
-livia.introduce();
+class Cohort {
+  _name: string;
+  _students: Student[];
+  _mentor: Mentor[];
+
+  constructor(name: string) {
+    this._name = name;
+    this._students = [];
+    this._mentor = [];
+  }
+
+  addStudents(student: Student): void {
+    this._students.push(student);
+  }
+
+  addMentor(mentor: Mentor): void {
+    this._mentor.push(mentor);
+  }
+
+  info(): void {
+    console.log(`The ${this._name} cohort has ${this._students.length} students and ${this._mentor.length} mentors.`);
+  }
+}
