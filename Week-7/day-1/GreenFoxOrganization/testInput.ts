@@ -1,3 +1,5 @@
+import { Person, Student, Mentor, Sponsor, Cohort } from './GreenFoxOrganization';
+
 let people = [];
 
 let mark = new Person('Mark', 46, 'male');

@@ -1,6 +1,6 @@
 `use strict`;
 
-class Person {
+export class Person {
   _name: string;
   _age: number;
   _gender: string;
@@ -20,7 +20,7 @@ class Person {
   }
 }
 
-class Student extends Person {
+export class Student extends Person {
   _previousOrganization: string;
   _skippedDays: number = 0;
 
@@ -39,12 +39,12 @@ class Student extends Person {
     );
   }
 
-  skipDays(numberOfDays: number): number {
-    return this._skippedDays + numberOfDays;
+  skipDays(numberOfDays: number): void {
+    this._skippedDays += numberOfDays;
   }
 }
 
-class Mentor extends Person {
+export class Mentor extends Person {
   _level: string;
 
   constructor(name?: string, age?: number, gender?: string, level?: string) {
@@ -61,7 +61,7 @@ class Mentor extends Person {
   }
 }
 
-class Sponsor extends Person {
+export class Sponsor extends Person {
   _company: string;
   _hiredStudents: number;
 
@@ -86,18 +86,18 @@ class Sponsor extends Person {
   }
 }
 
-class Cohort {
+export class Cohort {
   _name: string;
   _students: Student[];
   _mentor: Mentor[];
 
-  constructor(name: string) {
-    this._name = name;
+  constructor(name?: string) {
+    this._name = name ?? `Jane Doe`;
     this._students = [];
     this._mentor = [];
   }
 
-  addStudents(student: Student): void {
+  addStudent(student: Student): void {
     this._students.push(student);
   }
 
