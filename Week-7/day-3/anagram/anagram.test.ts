@@ -15,3 +15,10 @@ test(`two given arrays are not anagrams, should return false`, (t) => {
   t.equal(actual, expected);
   t.end();
 });
+
+test(`two given arrays are not anagrams because length, should return false`, (t) => {
+  const actual = anagram(`silents`, `listen`);
+  const expected = false;
+  t.equal(actual, expected);
+  t.end();
+});
