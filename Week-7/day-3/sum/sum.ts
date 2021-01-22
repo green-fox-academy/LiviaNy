@@ -15,15 +15,19 @@
 
 export class NumbersArray {
   protected _name: string;
+  protected _array: number[];
 
-  constructor(name: string) {
+  constructor(name: string, array: number[]) {
     this._name = name;
+    this._array = array;
   }
-  sumArr(arr: number[]) {
-    if (arr.length > 1) {
-      return arr.pop() + this.sumArr(arr);
+  sumArr(): number {
+    if (this._array.length > 1) {
+      return this._array.pop() + this.sumArr();
+    } else if (this._array.length === 1) {
+      return this._array[0];
     } else {
-      return arr[0];
+      return 0;
     }
   }
 }
