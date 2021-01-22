@@ -1,6 +1,6 @@
 `use strict`;
 
-function anagram(word1: string, word2: string): boolean {
+export function anagram(word1: string, word2: string): boolean {
   let array1: string[] = Array.from(word1).sort();
   let array2: string[] = Array.from(word2).sort();
   if (array1.length !== array2.length) {
