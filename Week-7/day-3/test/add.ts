@@ -1,3 +1,5 @@
-module.exports = function (a, b) {
+`use strict`;
+
+export function addTwoNumbers(a: number, b: number): number {
   return a + b;
-};
+}
