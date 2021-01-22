@@ -31,3 +31,12 @@ test(`should return 0`, (t) => {
   t.equal(actual, expected);
   t.end();
 });
+
+test(`should return the value of the only element`, (t) => {
+  const listOfNumbers: number[] = [10];
+  const list1 = new NumbersArray(`list1`, listOfNumbers);
+  const actual = list1.sumArr();
+  const expected = 10;
+  t.equal(actual, expected);
+  t.end();
+});
