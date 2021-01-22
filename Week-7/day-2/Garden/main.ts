@@ -1,0 +1,20 @@
+`use strict`;
+import { Garden } from './garden';
+// import { Plant } from './Plant';
+import { Flower } from './flower';
+import { Tree } from './tree';
+
+let kert = new Garden();
+let yellowFlower = new Flower(`yellow`);
+let blueFlower = new Flower(`blue`);
+let orangeTree = new Tree(`orange`);
+let purpleTree = new Tree(`purple`);
+kert.addPland(yellowFlower);
+kert.addPland(blueFlower);
+kert.addPland(orangeTree);
+kert.addPland(purpleTree);
+kert.showAllInfo();
+kert.waterThem(40);
+kert.showAllInfo();
+kert.waterThem(70);
+kert.showAllInfo();
