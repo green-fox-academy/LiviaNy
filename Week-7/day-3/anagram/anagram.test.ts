@@ -8,3 +8,10 @@ test(`two given arrays are anagrams, should return true`, (t) => {
   t.equal(actual, expected);
   t.end();
 });
+
+test(`two given arrays are not anagrams, should return false`, (t) => {
+  const actual = anagram(`sileng`, `listen`);
+  const expected = false;
+  t.equal(actual, expected);
+  t.end();
+});
