@@ -1,7 +1,7 @@
 // Write a function that computes a member of the fibonacci sequence by a given index
 // Create tests for multiple test cases.
 
-function fibonacci(n: number): number {
+export function fibonacci(n: number): number {
   if (n === 2) {
     return 1;
   } else if (n === 1) {
