@@ -33,13 +33,16 @@ export function isVowel(character: string): boolean {
 export function translate(hungarian: string): string {
   let teve = hungarian;
   let length = teve.length;
-
+  let used: string[] = [];
   for (let i = 0; i < length; i++) {
     let c = teve[i];
     if (isVowel(c)) {
-      teve = teve.split(c).join(`${c}v${c}`);
-      i += 2;
-      length += 2;
+      if (!used.includes(c)) {
+        teve = teve.split(c).join(`${c}v${c}`);
+        i += 2;
+        length += 2;
+        used.push(c);
+      }
     }
   }
   return teve;
