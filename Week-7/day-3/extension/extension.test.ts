@@ -35,17 +35,17 @@ test(`max of three: second`, (t) => {
 });
 //------------------------------------------------------------
 test('median: four', function (t: any): any {
-  t.equal(median([7, 5, 3, 5]), 5);
+  t.deepEqual(median([7, 5, 3, 5]), [5, 5]);
   t.end();
 });
 
 test('median: five', function (t: any): any {
-  t.equal(median([1, 2, 3, 4, 5]), 3);
+  t.deepEqual(median([1, 2, 3, 4, 5]), [3]);
   t.end();
 });
 
 test(`median:four`, (t) => {
-  t.equal(median([1, 2, 3, 4]), [2, 3]);
+  t.deepEqual(median([1, 2, 3, 4]), [2, 3]);
   t.end();
 });
 //------------------------------------------------------------
