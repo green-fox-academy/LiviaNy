@@ -1,14 +1,20 @@
-export function median(pool: number[]): number[] {
-  let newArray = [];
-  if (pool.length % 2 !== 0) {
-    newArray.push(pool.sort()[Math.floor((pool.length - 1) / 2)]);
-    return newArray;
-  } else {
-    newArray.push(pool.sort()[Math.floor((pool.length - 1) / 2)]);
-    newArray.push(pool.sort()[Math.floor(pool.length / 2)]);
-    return newArray;
-  }
+export function isVowel(character: string): boolean {
+  return ['a', 'u', 'o', 'e', 'i'].some((vowel) => vowel === character);
 }
 
-let pool = [1, 6, 3, 4];
-console.log(median(pool));
+export function translate(hungarian: string): string {
+  let teve = hungarian;
+  let length = teve.length;
+
+  for (let i = 0; i < length; i++) {
+    let c = teve[i];
+    if (isVowel(c)) {
+      teve = teve.split(c).join(`${c[i]}v${c}`);
+      i += 2;
+      length += 2;
+    }
+  }
+  return teve;
+}
+
+console.log(translate(`teve`));

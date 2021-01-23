@@ -18,7 +18,6 @@ test('add: 1 and 4 is 5', function (t: any): any {
   t.end();
 });
 //------------------------------------------------------------
-
 test('max of three: first', function (t: any): any {
   t.equal(maxOfThree(5, 4, 3), 5);
   t.end();
@@ -55,7 +54,7 @@ test('is vowel: a', function (t: any): any {
 });
 
 test('is vowel: u', function (t: any): any {
-  t.ok(isVowel('u'));
+  t.ok(isVowel('A'));
   t.end();
 });
 
@@ -63,7 +62,7 @@ test('is vowel: k', function (t: any): any {
   t.notOk(isVowel('k'));
   t.end();
 });
-
+//------------------------------------------------------------
 test('translate: bemutatkozik', function (t: any): any {
   t.equal(translate('bemutatkozik'), 'bevemuvutavatkovozivik');
   t.end();
