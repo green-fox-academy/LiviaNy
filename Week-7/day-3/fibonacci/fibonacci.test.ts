@@ -8,3 +8,11 @@ test(`should return fibonaci number of an argument`, (t) => {
   t.equal(actual, expected);
   t.end();
 });
+
+test(`should return fibonaci number of 0`, (t) => {
+  const actual = fibonacci(0);
+  const expected = 0;
+
+  t.equal(actual, expected);
+  t.end();
+});
