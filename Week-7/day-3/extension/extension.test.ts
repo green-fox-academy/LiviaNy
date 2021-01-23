@@ -17,6 +17,7 @@ test('add: 1 and 4 is 5', function (t: any): any {
   t.equal(add(1, 4), 5);
   t.end();
 });
+//------------------------------------------------------------
 
 test('max of three: first', function (t: any): any {
   t.equal(maxOfThree(5, 4, 3), 5);
@@ -28,6 +29,11 @@ test('max of three: third', function (t: any): any {
   t.end();
 });
 
+test(`max of three: second`, (t) => {
+  t.equal(maxOfThree(3, 4, 1), 4);
+  t.end();
+});
+//------------------------------------------------------------
 test('median: four', function (t: any): any {
   t.equal(median([7, 5, 3, 5]), 5);
   t.end();
