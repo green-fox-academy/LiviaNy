@@ -16,3 +16,11 @@ test(`should return fibonaci number of 0`, (t) => {
   t.equal(actual, expected);
   t.end();
 });
+
+test(`should return fibonaci number of 0`, (t) => {
+  const actual = fibonacci(-14);
+  const expected = -377;
+
+  t.equal(actual, expected);
+  t.end();
+});
