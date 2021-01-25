@@ -7,7 +7,7 @@ export class Mammal extends Animals {
     this._name = name;
   }
 
-  breed() {
-    console.log(`pushing miniature versions out`);
+  breed(): string {
+    return `pushing miniature versions out.`;
   }
 }

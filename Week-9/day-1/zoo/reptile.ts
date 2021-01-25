@@ -9,6 +9,6 @@ export class Reptile extends Animals {
   }
 
   breed(): string {
-    return `laying eggs`;
+    return `laying eggs.`;
   }
 }
