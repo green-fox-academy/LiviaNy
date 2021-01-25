@@ -4,9 +4,9 @@
 // countUsable() -> sharpie is usable if it has ink in it
 // removeTrash() -> removes all unusable sharpies
 
-import { count } from "console";
-import { unwatchFile } from "fs";
-import { Sharpie } from "./../sharpie/sharpie";
+import { count } from 'console';
+import { unwatchFile } from 'fs';
+import { Sharpie } from './../sharpie/sharpie';
 
 class SharpieSet {
   SharpieSet: Sharpie[];
@@ -36,11 +36,7 @@ class SharpieSet {
 let blueSharpie = new Sharpie(`blue`, 10);
 let yellowSharpie = new Sharpie(`yellow`, 10);
 let pinkSharpie = new Sharpie(`pink`, 10);
-let firstSetOfSharpie = new SharpieSet([
-  blueSharpie,
-  yellowSharpie,
-  pinkSharpie,
-]);
+let firstSetOfSharpie = new SharpieSet([blueSharpie, yellowSharpie, pinkSharpie]);
 console.log(firstSetOfSharpie);
 firstSetOfSharpie.countUsable();
 yellowSharpie.use();

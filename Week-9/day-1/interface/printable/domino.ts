@@ -10,7 +10,7 @@ export class Domino implements Printable {
     this._BSide = BSide ?? 2;
   }
 
-  printableFields() {
+  printAllFields() {
     console.log(`Domino A side: ${this._ASide}, B side: ${this._BSide}`);
   }
 }
