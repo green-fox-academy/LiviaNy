@@ -8,6 +8,6 @@ export class Mammal extends Animals {
   }
 
   breed() {
-    console.log(`laying eggs`);
+    console.log(`pushing miniature versions out`);
   }
 }
