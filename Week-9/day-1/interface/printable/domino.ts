@@ -1,12 +1,13 @@
 `use strict`;
 import { Printable } from './printable';
+
 export class Domino implements Printable {
   _ASide: number;
   _BSide: number;
 
-  constructor() {
-    this._ASide = 3;
-    this._BSide = 2;
+  constructor(ASide?: number, BSide?: number) {
+    this._ASide = ASide ?? 3;
+    this._BSide = BSide ?? 2;
   }
 
   printableFields() {

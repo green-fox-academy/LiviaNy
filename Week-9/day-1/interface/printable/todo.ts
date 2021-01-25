@@ -1,18 +1,22 @@
 `use strict`;
 import { Printable } from './printable';
 
-export class Todo {
+export class Todo implements Printable {
   _task: string;
   _priority: string;
   _status: boolean;
 
-  constructor() {
-    this._task = `Buy some milk`;
-    this._priority = `high`;
+  constructor(task: string, priority: string) {
+    this._task = task;
+    this._priority = priority;
+    this._status = false;
+  }
+
+  doneTask(): void {
     this._status = true;
   }
 
-  printableFields() {
+  printAllFields() {
     console.log(`Task: ${this._task} | Priority: ${this._priority} | Done: ${this._status}`);
   }
 }
