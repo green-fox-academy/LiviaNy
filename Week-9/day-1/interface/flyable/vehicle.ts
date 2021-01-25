@@ -1,7 +1,12 @@
 `use strict`;
 
 export class Vehicle {
-  _name: string;
-  _colour: string;
-  _speed: number;
+  protected _name: string;
+  protected _colour: string;
+  protected _speed: number;
+
+  constructor() {
+    this._name;
+    this._speed;
+  }
 }
