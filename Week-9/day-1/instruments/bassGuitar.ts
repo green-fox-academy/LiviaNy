@@ -7,7 +7,7 @@ export class BassGuitar extends StringedIstruments {
     this._name = `Bass Guitar`;
     this._numberOfStrings = numberOfString ?? 4;
   }
-  public sound() {
-    console.log(`Dumm-dumm-dumm`);
+  public sound(): string {
+    return `Dumm-dumm-dumm`;
   }
 }

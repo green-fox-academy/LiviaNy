@@ -7,7 +7,7 @@ export class Violin extends StringedIstruments {
     this._numberOfStrings = numberOfString ?? 4;
     this._name = `Violin`;
   }
-  public sound() {
-    console.log(`Screech`);
+  public sound(): string {
+    return `Screech`;
   }
 }

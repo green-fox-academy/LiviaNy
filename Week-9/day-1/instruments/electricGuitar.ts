@@ -7,7 +7,7 @@ export class ElectricGuitar extends StringedIstruments {
     this._name = `Electric Guitar`;
     this._numberOfStrings = numberOfString ?? 6;
   }
-  public sound() {
-    console.log(`Twang`);
+  public sound(): string {
+    return `Twang`;
   }
 }
