@@ -4,7 +4,7 @@ export abstract class Instruments {
   _name: string;
   abstract play(): void;
 
-  constructor(name: string) {
-    this._name = name;
+  constructor() {
+    this._name;
   }
 }

@@ -1,13 +1,13 @@
 `use strict`;
 import { Instruments } from './instruments';
 
-export abstract class stringedIstruments extends Instruments {
+export abstract class StringedIstruments extends Instruments {
   _numberOfStrings: number;
   abstract sound(): void;
 
-  constructor(numberOfStrings: number, name: string) {
-    super(name);
-    this._numberOfStrings = numberOfStrings;
+  constructor() {
+    super();
+    this._numberOfStrings;
   }
   play(): void {}
 }
