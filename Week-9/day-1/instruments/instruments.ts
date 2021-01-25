@@ -1,10 +1,10 @@
 `use strict`;
 
-abstract class Instruments {
+export abstract class Instruments {
   _name: string;
   abstract play(): void;
 
-  constructor(name) {
+  constructor(name: string) {
     this._name = name;
   }
 }
