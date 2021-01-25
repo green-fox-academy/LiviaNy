@@ -1,8 +1,8 @@
 `use strict`;
 
 export abstract class Instruments {
-  _name: string;
-  abstract play(): void;
+  public _name: string;
+  public abstract play(): void;
 
   constructor() {
     this._name;

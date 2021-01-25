@@ -2,14 +2,12 @@
 import { StringedIstruments } from './stringedInstruments';
 
 export class ElectricGuitar extends StringedIstruments {
-  constructor() {
-    super(6);
+  constructor(numberOfString?: number) {
+    super();
     this._name = `Electric Guitar`;
+    this._numberOfStrings = numberOfString ?? 6;
   }
-  play() {
-    console.log(`${this._name}, a ${this._numberOfStrings}-stringed instrument that goes ${this.sound()}.`);
-  }
-  sound() {
+  public sound() {
     console.log(`Twang`);
   }
 }

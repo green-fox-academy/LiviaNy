@@ -2,12 +2,14 @@
 import { Instruments } from './instruments';
 
 export abstract class StringedIstruments extends Instruments {
-  _numberOfStrings: number;
-  abstract sound(): void;
+  public _numberOfStrings: number;
+  public abstract sound(): void;
 
   constructor() {
     super();
-    this._numberOfStrings;
   }
-  play(): void {}
+
+  play(): void {
+    console.log(`${this._name}, is a ${this._numberOfStrings}- stringed instrument that goes ${this.sound()}.`);
+  }
 }

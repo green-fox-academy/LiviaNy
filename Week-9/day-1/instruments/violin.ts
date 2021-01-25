@@ -2,15 +2,12 @@
 import { StringedIstruments } from './stringedInstruments';
 
 export class Violin extends StringedIstruments {
-  constructor() {
-    super(4);
+  constructor(numberOfString?: number) {
+    super();
+    this._numberOfStrings = numberOfString ?? 4;
     this._name = `Violin`;
   }
-  sound() {
+  public sound() {
     console.log(`Screech`);
-  }
-
-  play() {
-    console.log(`${this._name}, is a ${this._numberOfStrings}- stringed instrument that goes ${this.sound()}`);
   }
 }
