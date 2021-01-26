@@ -37,6 +37,14 @@ export class Aircraft {
   getStatus(): string {
     return `Type: ${this._type}, Ammo: ${this._ammoStorage}, Base Damage: ${this._baseDamage}, All Damage: ${this._allDamage}`;
   }
+
+  isPriority(): boolean {
+    if (this._type === `F35`) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 
 let aircraft: Aircraft = new Aircraft();
