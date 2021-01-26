@@ -1,31 +1,33 @@
-class Aircrafts {
-  _ammunition: number;
-  _maxAmmo: number;
-  _baseDamage: number;
+export class Aircraft {
+  protected _ammoStorage: number;
+  protected _maxAmmo: number;
+  protected _baseDamage: number;
+  protected _type: string;
+  protected _status: string;
 
-  constructor() {
-    this._ammunition = 0;
+  constructor(maxAmmo?: number, baseDamage?: number) {
+    this._ammoStorage = 0;
+    this._maxAmmo = maxAmmo ?? 10;
+    this._baseDamage = baseDamage ?? 0;
   }
 
   fight(): number {
-    return this._ammunition * this._baseDamage;
+    let damage: number = this._ammoStorage * this._baseDamage;
+    this._ammoStorage = 0;
+    return damage;
+  }
+
+  refill(loadAmount: number) {
+    if (loadAmount === 0 || this._ammoStorage >= this._maxAmmo) {
+      return loadAmount;
+    } else {
+      this._ammoStorage++;
+      loadAmount--;
+      return this.refill(loadAmount);
+    }
   }
 }
 
-class F16 extends Aircrafts {
-  constructor() {
-    super();
-    this._ammunition = 0;
-    this._baseDamage = 30;
-    this._maxAmmo = 8;
-  }
-}
-
-class F35 extends Aircrafts {
-  constructor() {
-    super();
-    this._ammunition = 0;
-    this._baseDamage = 50;
-    this._maxAmmo = 12;
-  }
-}
+let aircraft: Aircraft = new Aircraft();
+console.log(aircraft.refill(50));
+console.log(aircraft);
