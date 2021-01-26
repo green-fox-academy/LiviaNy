@@ -14,10 +14,22 @@ export class Aircraft {
     this._allDamage = this._ammoStorage * this._baseDamage;
   }
 
+  getAmmo(): number {
+    return this._ammoStorage;
+  }
+
+  getBaseDamage(): number {
+    return this._baseDamage;
+  }
+
   fight(): number {
     let damage: number = this._ammoStorage * this._baseDamage;
     this._ammoStorage = 0;
     return damage;
+  }
+
+  getAllDamage(): number {
+    return this._allDamage;
   }
 
   refill(loadAmount: number): number {
@@ -46,7 +58,3 @@ export class Aircraft {
     }
   }
 }
-
-let aircraft: Aircraft = new Aircraft();
-console.log(aircraft.refill(50));
-console.log(aircraft);
