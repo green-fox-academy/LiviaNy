@@ -4,11 +4,14 @@ export class Aircraft {
   protected _baseDamage: number;
   protected _type: string;
   protected _status: string;
+  protected _allDamage: number;
 
-  constructor(maxAmmo?: number, baseDamage?: number) {
+  constructor(type: string, maxAmmo?: number, baseDamage?: number) {
     this._ammoStorage = 0;
     this._maxAmmo = maxAmmo ?? 10;
     this._baseDamage = baseDamage ?? 0;
+    this._type = type;
+    this._allDamage = this._ammoStorage * this._baseDamage;
   }
 
   fight(): number {
@@ -17,7 +20,7 @@ export class Aircraft {
     return damage;
   }
 
-  refill(loadAmount: number) {
+  refill(loadAmount: number): number {
     if (loadAmount === 0 || this._ammoStorage >= this._maxAmmo) {
       return loadAmount;
     } else {
@@ -25,6 +28,14 @@ export class Aircraft {
       loadAmount--;
       return this.refill(loadAmount);
     }
+  }
+
+  getType(): string {
+    return this._type;
+  }
+
+  getStatus(): string {
+    return `Type: ${this._type}, Ammo: ${this._ammoStorage}, Base Damage: ${this._baseDamage}, All Damage: ${this._allDamage}`;
   }
 }
 
