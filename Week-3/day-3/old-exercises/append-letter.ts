@@ -8,10 +8,14 @@ console.log(appendA(far));
 
 // The output should be: 'boa', 'anaconda', 'koala', 'panda', 'zebra'
 function appendA(inputArray: string[]) {
-  let newArray: string[] = [];
-  for (let i: number = 0; i < inputArray.length; i++) {
-    newArray.push(inputArray[i] + `a`);
-  }
+  //   let newArray: string[] = [];
+  //   for (let i: number = 0; i < inputArray.length; i++) {
+  //     newArray.push(inputArray[i] + `a`);
+  //   }
+  //   return newArray;
+  let newArray = inputArray.map((animal) => {
+    return animal + `a`;
+  });
   return newArray;
 }
 export = appendA;
