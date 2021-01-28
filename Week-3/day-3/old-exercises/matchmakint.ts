@@ -15,6 +15,8 @@ function makingMatches(array1: string[], array2: string[]) {
     matchedList.push(array1[i]);
     matchedList.push(array2[i]);
   }
+  let removeUndefined: number = matchedList.indexOf(undefined);
+  matchedList.splice(removeUndefined, 1);
   return matchedList;
 }
 console.log(makingMatches(girls, boys));
