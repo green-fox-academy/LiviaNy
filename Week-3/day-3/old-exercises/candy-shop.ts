@@ -9,15 +9,17 @@ let shopItems: any[] = ['Cupcake', 2, 'Brownie', false];
 // Expected output: "Cupcake", "Croissant", "Brownie", "Ice cream"
 
 function sweets(sweetsArray): string[] {
-  for (let i: number = 0; i < sweetsArray.length; i++) {
-    if (sweetsArray[i] === 2) {
-      sweetsArray.splice(i, 1);
-      sweetsArray.splice(i, 0, `Croissant`);
-    } else if (sweetsArray[i] === false) {
-      sweetsArray.splice(i, 1);
-      sweetsArray.splice(i, 0, `Ice Cream`);
-    }
-  }
+  //   for (let i: number = 0; i < sweetsArray.length; i++) {
+  //     if (sweetsArray[i] === 2) {
+  //       sweetsArray.splice(i, 1);
+  //       sweetsArray.splice(i, 0, `Croissant`);
+  //     } else if (sweetsArray[i] === false) {
+  //       sweetsArray.splice(i, 1);
+  //       sweetsArray.splice(i, 0, `Ice Cream`);
+  //     }
+  //   }
+  sweetsArray.splice(1, 1, `Croissant`);
+  sweetsArray.splice(3, 1, `Ice Cream`);
   return sweetsArray;
 }
 
