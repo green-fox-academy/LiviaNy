@@ -7,7 +7,7 @@ let far: string[] = ['bo', 'anacond', 'koal', 'pand', 'zebr'];
 console.log(appendA(far));
 
 // The output should be: 'boa', 'anaconda', 'koala', 'panda', 'zebra'
-function appendA(inputArray: string[]) {
+function appendA(inputArray: string[]): string[] {
   //   let newArray: string[] = [];
   //   for (let i: number = 0; i < inputArray.length; i++) {
   //     newArray.push(inputArray[i] + `a`);

@@ -9,7 +9,7 @@ import { indexOf, split } from '../strings/simple-replace';
 let girls: string[] = ['Eve', 'Ashley', 'Claire', 'Kat', 'Jane'];
 let boys: string[] = ['Joe', 'Fred', 'Tom', 'Todd', 'Neef', 'Jeff'];
 
-function makingMatches(array1: string[], array2: string[]) {
+function makingMatches(array1: string[], array2: string[]): string[] {
   let matchedList: string[] = [];
   for (let i: number = 0; i < (array2.length || array1.length); i++) {
     matchedList.push(array1[i]);
