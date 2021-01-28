@@ -1,4 +1,4 @@
-import { indexOf } from "../simple-replace";
+import { indexOf } from '../strings/simple-replace';
 
 //Create an empty list which will contain names (strings)
 let list: string[] = [];
@@ -17,16 +17,16 @@ console.log(list.length);
 //Print out the 3rd element
 console.log(list[2]);
 //Iterate through the list and print out each name
-list.forEach(Element => console.log(Element));
+list.forEach((Element) => console.log(Element));
 //Iterate through the list and print
 for (const [index, element] of list.entries()) {
-    console.log(index, element);
+  console.log(index, element);
 }
 //Remove the 2nd element
 list.splice(1, 1);
 //Iterate through the list in a reversed order and print out each name
 for (let i: number = list.length - 1; i >= 0; i--) {
-    console.log(list[i]);
+  console.log(list[i]);
 }
 //Remove all elements
 console.log(list.slice(2));

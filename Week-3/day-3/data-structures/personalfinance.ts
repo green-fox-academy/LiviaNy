@@ -1,6 +1,6 @@
 //We are going to represent our expenses in a list containing integers.
 
-import { fontcolor } from "../simple-replace";
+import { fontcolor } from '../strings/simple-replace';
 
 // Create a list with the following items.
 // 500, 1000, 1250, 175, 800 and 120
@@ -11,10 +11,10 @@ import { fontcolor } from "../simple-replace";
 // What was the average amount of our spendings?
 let expenses: number[] = [500, 1000, 1250, 175, 800, 120];
 function app() {
-    console.log(`You spent: ` + expenses.reduce((a, b) => a + b));
-    console.log(`Your greatest expense: ` + expenses.reduce((c, d) => Math.max(c, d)));
-    console.log(`Your cheapest spending was: ` + expenses.reduce((e, f) => Math.min(e, f)));
-    console.log(`Your average sending was: ` + ((expenses.reduce((a, b) => a + b) / expenses.length)));
-    return ``
+  console.log(`You spent: ` + expenses.reduce((a, b) => a + b));
+  console.log(`Your greatest expense: ` + expenses.reduce((c, d) => Math.max(c, d)));
+  console.log(`Your cheapest spending was: ` + expenses.reduce((e, f) => Math.min(e, f)));
+  console.log(`Your average sending was: ` + expenses.reduce((a, b) => a + b) / expenses.length);
+  return ``;
 }
 console.log(app());
