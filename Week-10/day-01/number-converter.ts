@@ -15,7 +15,6 @@ export function converter(number: number) {
   if (number.toString().split(``).length === 1) {
     return singleDigit[number];
   } else {
-    let index = parseInt(number.toString().split(``)[1]);
-    return twoDigits[index];
+    return twoDigits[parseInt(number.toString().split(``)[1])];
   }
 }
