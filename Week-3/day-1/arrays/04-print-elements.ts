@@ -4,9 +4,7 @@
 // *hint: use a loop, console.log(numbers) won't cut it
 // -  bonus for using the correct built in array method
 
-
-
-let numbers: number[] = [4, 5, 6, 7];
+const Arr: number[] = [4, 5, 6, 7];
 
 // for (let i: number = 0; i <= numbers.length; i++) {
 //     console.log(numbers[i]);
@@ -14,4 +12,10 @@ let numbers: number[] = [4, 5, 6, 7];
 
 //numbers.forEach(element => console.log(element));
 
-function 
+function logNumers(numbers: number[]): void {
+  numbers.forEach((element) => {
+    console.log(element);
+  });
+}
+
+logNumers(Arr);
