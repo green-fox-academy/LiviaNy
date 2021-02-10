@@ -1,3 +1,5 @@
+`use strict`;
+
 // - Create a function called `calculateFactorial()`
 //   that returns the factorial of its input
 let input: number = 7;
@@ -13,16 +15,14 @@ let input: number = 7;
 // }
 // console.log(calculateFactorial(input));
 
-let calculateFactorial: (i: number) => any = function (
-    i
-) {
-    if (i > 1) {
-        return (i * calculateFactorial(i - 1))
-    } else if (i < 0) {
-        return `Require positive number`
-    } else {
-        return 1
-    }
-}
+let calculateFactorial: (i: number) => any = function (i) {
+  if (i > 1) {
+    return i * calculateFactorial(i - 1);
+  } else if (i < 0) {
+    return `Require positive number`;
+  } else {
+    return 1;
+  }
+};
 
 console.log(calculateFactorial(input));
