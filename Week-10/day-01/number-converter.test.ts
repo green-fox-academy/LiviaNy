@@ -17,3 +17,19 @@ test(`given 2 digit`, (t) => {
   t.equal(actual, expected);
   t.end();
 });
+
+test(`given 2 digit numbers over 19`, (t) => {
+  const actual = converter(21);
+  const expected = `twenty-one`;
+
+  t.equal(actual, expected);
+  t.end();
+});
+
+test(`number 20 shoud return "twenty" `, (t) => {
+  const actual = converter(20);
+  const expected = `twenty`;
+
+  t.equal(actual, expected);
+  t.end();
+});
