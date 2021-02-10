@@ -1,3 +1,5 @@
+`use strict`;
+
 // -  Create a variable named `numbers`
 //    with the following content: `[3, 4, 5, 6, 7]`
 // -  Reverse the order of the elements of `numbers`
@@ -10,7 +12,7 @@ let tempArray: number[] = [];
 //console.log(numbers.reverse())
 
 for (let i: number = numbers.length - 1; i >= 0; i--) {
-    tempArray.push(numbers[i]);
+  tempArray.push(numbers[i]);
 }
 numbers = tempArray;
 console.log(numbers);
