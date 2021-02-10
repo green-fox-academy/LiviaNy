@@ -10,6 +10,14 @@ test(``, (t) => {
 });
 
 test(``, (t) => {
+  const actual = anagram(`alma`, `alma`);
+  const expected = true;
+
+  t.equal(actual, expected);
+  t.end();
+});
+
+test(``, (t) => {
   const actual = anagram(`alma`, `lama`);
   const expected = true;
 
