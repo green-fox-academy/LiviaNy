@@ -14,13 +14,12 @@ let toBeReversed: string = `.eslaf eb t'ndluow ecnetnes siht ,dehctiws erew esla
 //  }
 //  }
 
-function reverse(x) {
-    x = x.split(``);
-    x.reverse();
-    return x = x.join(``);
+function reverse(x: string): string {
+  let reversedString: string[] = [];
+  reversedString = x.split(``).reverse();
+  return reversedString.join(``);
 }
 
 console.log(reverse(toBeReversed));
 
-//export = reverse;
-
+export = reverse;
