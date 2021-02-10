@@ -33,3 +33,11 @@ test(`number 20 shoud return "twenty" `, (t) => {
   t.equal(actual, expected);
   t.end();
 });
+
+test(`number 20 shoud return "twenty" `, (t) => {
+  const actual = converter(121);
+  const expected = `hundred and twenty-one`;
+
+  t.equal(actual, expected);
+  t.end();
+});
