@@ -1,7 +1,6 @@
 'use strict';
 
-let numbera: number = 15;
-
+let number: number = 15;
 // Create a program that
 // prints the multiplication table with number
 //
@@ -18,10 +17,15 @@ let numbera: number = 15;
 // 8 * 15 = 120
 // 9 * 15 = 135
 // 10 * 15 = 150
+
+// for (let i: number = 1; i < 11; i++) {
+//   console.log(i + ` * ` + number + ` = ` + i * number);
+// }
+
 function multiplyTable(numberToMultiply: number): void {
   for (let i: number = 1; i <= 10; i++) {
     console.log(i + ` * ` + numberToMultiply + ` = ` + i * numberToMultiply);
   }
 }
 
-multiplyTable(numbera);
+multiplyTable(number);
