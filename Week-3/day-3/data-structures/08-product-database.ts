@@ -21,6 +21,14 @@ let products: object = {
 function solvingApp(products: Object) {
   // How much is the fish?
   console.log(`The fish costs: ` + products[`Fish`]);
+  // What is the most expensive product?
+  let highestPrice: number = 0;
+  for (let i: number = 0; i < Object.keys(products).length; i++) {
+    if (Object.values(products)[i] > highestPrice) {
+      highestPrice = Object.values(products)[i];
+    }
+  }
+  console.log(highestPrice);
 }
 
 solvingApp(products);
