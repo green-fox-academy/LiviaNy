@@ -7,9 +7,17 @@
 // should print: `[0, 1, 4]`
 //console.log(findMatchingIndexes(9, [1, 11, 34, 52, 61]));
 // should print: '[]'
-// let array1: number[] = [1, 11, 34, 52, 61];
-// function findMatchingIndexes(number, array) {
-//     for (let i: number = 0; i < arr.length; i++) {
-//         let newNumber: number = arr[i];
-//     }
-// }
+
+let arrayToCheck: number[] = [1, 11, 34, 52, 61];
+
+function findMatchingIndex(number: number, array: number[]): number[] {
+  let newArray: number[] = [];
+  for (let i: number = 0; i < array.length; i++) {
+    if (array[i].toString().indexOf(number.toString()) >= 0) {
+      newArray.push(i);
+    }
+  }
+  return newArray;
+}
+
+console.log(findMatchingIndex(9, arrayToCheck));
