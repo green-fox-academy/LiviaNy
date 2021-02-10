@@ -1,4 +1,4 @@
-import { indexOf } from '../strings/simple-replace';
+`use strict`;
 
 //Create an empty list which will contain names (strings)
 let list: string[] = [];

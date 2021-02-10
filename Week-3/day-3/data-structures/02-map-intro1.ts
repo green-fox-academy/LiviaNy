@@ -1,11 +1,11 @@
-`use strict`
+`use strict`;
 
 //Create an empty map where the keys are integers and the values are characters
 let map: object = {
-    1: `a`,
-    2: `b`,
-    3: `c`,
-}
+  1: `a`,
+  2: `b`,
+  3: `c`,
+};
 //Print out whether the map is empty or not
 console.log(map);
 //Add the following key-value pairs to the map
@@ -24,7 +24,7 @@ map[66] = `B`;
 map[67] = `C`;
 //Print all the keys
 for (let key in map) {
-    console.log(key);
+  console.log(key);
 }
 //Print all the values
 console.log(Object.values(map));
@@ -44,18 +44,18 @@ delete map[97];
 //         console.log(`There is no value with key 100 in the map`);
 //     } else {
 //         console.log(`error`);
-//     } 
+//     }
 // }
 // KeyInObject()
 if (map.hasOwnProperty(100) === true) {
-    console.log(`There is a value with key 100 in the map`);
+  console.log(`There is a value with key 100 in the map`);
 } else if (map.hasOwnProperty(100) === false) {
-    console.log(`There is no value with key 100 in the map`);
+  console.log(`There is no value with key 100 in the map`);
 } else {
-    console.log(`error`);
+  console.log(`error`);
 }
 //Remove all the key-value pairs
 for (let key in map) {
-    delete map[key];
+  delete map[key];
 }
 console.log(map);

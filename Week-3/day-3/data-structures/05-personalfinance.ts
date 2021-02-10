@@ -1,6 +1,6 @@
 //We are going to represent our expenses in a list containing integers.
 
-import { fontcolor } from '../strings/simple-replace';
+import { fontcolor } from '../strings/01-simple-replace';
 
 // Create a list with the following items.
 // 500, 1000, 1250, 175, 800 and 120
