@@ -1,5 +1,7 @@
 // Represent the following products with their prices
 
+import { Key } from 'readline';
+
 let ProductPriceList: object = {
   Milk: 1.07,
   Rice: 1.59,
@@ -17,7 +19,7 @@ let bobsShoppingList: object = {
   Rice: 2,
   Eggs: 2,
   Cheese: 1,
-  'SChicken Breasts': 4,
+  'Chicken Breasts': 4,
   Apples: 1,
   Tomato: 2,
   Potato: 1,
@@ -47,6 +49,30 @@ console.log(spendings(bobsShoppingList, ProductPriceList).toFixed(2));
 // How much does Alice pay?
 console.log(spendings(alicesShoppingList, ProductPriceList).toFixed(2));
 // Who buys more Rice?
+function moreProduct(productToCompare): string {
+  for (let i: number = 0; i < Object.keys(bobsShoppingList).length; i++) {
+    let indexOfProduct1 = Object.keys(bobsShoppingList).indexOf(productToCompare);
+    let indexOfProduct2 = Object.keys(alicesShoppingList).indexOf(productToCompare);
+    if (indexOfProduct1 === -1) {
+      return `Alice bought more ${productToCompare}`;
+    } else if (indexOfProduct2 === -1) {
+      return `Bob bought more ${productToCompare}`;
+    } else if (Object.values(bobsShoppingList)[indexOfProduct1] > Object.values(alicesShoppingList)[indexOfProduct2]) {
+      return `Bob bought more ${productToCompare}`;
+    } else if (Object.values(bobsShoppingList)[indexOfProduct1] < Object.values(alicesShoppingList)[indexOfProduct2]) {
+      return `Alice bought more ${productToCompare}`;
+    } else if (
+      Object.values(bobsShoppingList)[indexOfProduct1] === Object.values(alicesShoppingList)[indexOfProduct2]
+    ) {
+      return `They bought same amount of ${productToCompare}`;
+    } else {
+      return `No such product to compare.`;
+    }
+  }
+}
+
 // Who buys more Potato?
+console.log(moreProduct(`Potato`));
 // Who buys more different products?
+console.log(moreProduct(`Chicken Breasts`));
 // Who buys more products? (piece)
