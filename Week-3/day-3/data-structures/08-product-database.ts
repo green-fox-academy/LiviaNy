@@ -1,3 +1,5 @@
+import { indexOf } from '../strings/01-simple-replace';
+
 `use strict`;
 
 // We are going to represent our products in a map where the keys are strings representing the product's name and the values are numbers representing the product's price.
@@ -28,7 +30,26 @@ function solvingApp(products: Object) {
       highestPrice = Object.values(products)[i];
     }
   }
-  console.log(highestPrice);
+  console.log(`The most expensive product is: ` + Object.keys(products)[Object.values(products).indexOf(highestPrice)]);
+
+  // What is the average price?
+  let average: number = 0;
+  for (let i: number = 0; i < Object.keys(products).length; i++) {
+    average += Object.values(products)[i];
+  }
+  console.log(`Average value of products: ` + (average = average / Object.keys(products).length).toFixed(2));
+
+  // How many products' price is below 300?
+  let counter: number = 0;
+  for (let k: number = 0; k < Object.keys(products).length; k++) {
+    if (Object.values(products)[k] < 300) {
+      counter++;
+    }
+  }
+  console.log(`There are ${counter} products price below 300`);
+
+  // Is there anything we can buy for exactly 125?
+  // What is the cheapest product?
 }
 
 solvingApp(products);
