@@ -29,7 +29,25 @@ console.log(getNameAndBalance(11234543));
 //  - amount of cash to transfer
 //
 // Log "404 - account not found" if any of the account numbers don't exist to the console.
-
+function transferring(
+  accounts: any[],
+  fromAccountNumber: number,
+  toAccountNumber: number,
+  amountToTransfer: number
+): void {
+  for (let i: number = 0; i < accounts.length; i++) {
+    if (accounts[i].accountNumber === fromAccountNumber) {
+      accounts[i].balance - amountToTransfer;
+    } else {
+      `404 - account not found`;
+    }
+    if (accounts[i].accountNumber === toAccountNumber) {
+      accounts[i].balance + amountToTransfer;
+    } else {
+      `404 - account not found`;
+    }
+  }
+}
 // transferAmount(accounts, 43546731, 23456311, 500.0);
 //After printing the "accounts" it should look like:
 // const accounts = [
