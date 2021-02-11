@@ -49,7 +49,19 @@ function solvingApp(products: Object) {
   console.log(`There are ${counter} products price below 300`);
 
   // Is there anything we can buy for exactly 125?
+  for (let l: number = 0; l < Object.keys(products).length; l++) {
+    if (Object.values(products)[l] === 125) {
+      console.log(`You can buy ` + Object.keys(products)[l] + `for 125`);
+    }
+  }
   // What is the cheapest product?
+  let lowestPrice: number = Object.values(products)[0];
+  for (let i: number = 0; i < Object.keys(products).length; i++) {
+    if (Object.values(products)[i] < lowestPrice) {
+      lowestPrice = Object.values(products)[i];
+    }
+  }
+  console.log(`The least expensive product is: ` + Object.keys(products)[Object.values(products).indexOf(lowestPrice)]);
 }
 
 solvingApp(products);
