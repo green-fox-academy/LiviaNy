@@ -7,7 +7,7 @@ let ProductPriceList: object = {
   Rice: 1.59,
   Eggs: 3.14,
   Cheese: 12.6,
-  'Chicken Breast': 9.4,
+  'Chicken Breasts': 9.4,
   Apples: 2.31,
   Tomato: 2.58,
   Potato: 1.75,
@@ -76,3 +76,43 @@ console.log(moreProduct(`Potato`));
 // Who buys more different products?
 console.log(moreProduct(`Chicken Breasts`));
 // Who buys more products? (piece)
+function moreProductPrice(productToCompare): string {
+  for (let i: number = 0; i < Object.keys(bobsShoppingList).length; i++) {
+    let bobProductIndex = Object.keys(bobsShoppingList).indexOf(productToCompare);
+    let aliceProductIndex = Object.keys(alicesShoppingList).indexOf(productToCompare);
+    let productIndexOf = Object.keys(ProductPriceList).indexOf(productToCompare);
+    if (bobProductIndex === -1) {
+      return (
+        `Alice bought more ${productToCompare} for ` +
+        Object.values(alicesShoppingList)[aliceProductIndex] * Object.values(ProductPriceList)[productIndexOf]
+      );
+    } else if (aliceProductIndex === -1) {
+      return (
+        `Bob bought more ${productToCompare} for ` +
+        Object.values(bobsShoppingList)[bobProductIndex] * Object.values(ProductPriceList)[productIndexOf]
+      );
+    } else if (
+      Object.values(bobsShoppingList)[bobProductIndex] > Object.values(alicesShoppingList)[aliceProductIndex]
+    ) {
+      return (
+        `Bob bought more ${productToCompare} for ` +
+        Object.values(bobsShoppingList)[bobProductIndex] * Object.values(ProductPriceList)[productIndexOf]
+      );
+    } else if (
+      Object.values(bobsShoppingList)[bobProductIndex] < Object.values(alicesShoppingList)[aliceProductIndex]
+    ) {
+      return (
+        `Alice bought more ${productToCompare} for ` +
+        Object.values(alicesShoppingList)[aliceProductIndex] * Object.values(ProductPriceList)[productIndexOf]
+      );
+    } else if (
+      Object.values(bobsShoppingList)[bobProductIndex] === Object.values(alicesShoppingList)[aliceProductIndex]
+    ) {
+      return `They bought same amount of ${productToCompare}`;
+    } else {
+      return `No such product to compare.`;
+    }
+  }
+}
+
+console.log(moreProductPrice(`Chicken Breasts`));
