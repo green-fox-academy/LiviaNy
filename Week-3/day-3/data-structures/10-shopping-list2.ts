@@ -1,68 +1,52 @@
 // Represent the following products with their prices
 
-// Product	Amount
-// Milk	1.07
-// Rice	1.59
-// Eggs	3.14
-// Cheese	12.60
-// Chicken Breasts	9.40
-// Apples	2.31
-// Tomato	2.58
-// Potato	1.75
-// Onion	1.10
-let ShoppingList:object = {
-    "Milk": 1.07,
-    "Rice": 1.59,
-    "Eggs": 3.14,
-    "Cheese": 12.60,
-    "Chicken Breast": 9.40,
-    "Apples": 2.31,
-    "Tomato": 2.58,
-    "Potato": 1.75,
-    "Onion": 1.10,
-}
-// Represent Bob's shopping list
-// Product	Amount
-// Milk	3
-// Rice	2
-// Eggs	2
-// Cheese	1
-// Chicken Breasts	4
-// Apples	1
-// Tomato	2
-// Potato	1
-let bobsShoppingList:object = {
-"Milk":	3,
-"Rice":	2,
-"Eggs":	2,
-"Cheese": 1,
-"Chicken Breasts": 4,
-"Apples": 1,
-"Tomato": 2,
-"Potato": 1,
-}
-//Represent Alice's shopping list
-// Product	Amount
-// Rice	1
-// Eggs	5
-// Chicken Breasts	2
-// Apples	1
-// Tomato	10
-let alicesShoppingList:object = {
-"Rice":	1,
-"Eggs":	5,
-"Chicken Breasts": 2,
-"Apples": 1,
-"Tomato": 10,
-}
+let ProductPriceList: object = {
+  Milk: 1.07,
+  Rice: 1.59,
+  Eggs: 3.14,
+  Cheese: 12.6,
+  'Chicken Breast': 9.4,
+  Apples: 2.31,
+  Tomato: 2.58,
+  Potato: 1.75,
+  Onion: 1.1,
+};
+
+let bobsShoppingList: object = {
+  Milk: 3,
+  Rice: 2,
+  Eggs: 2,
+  Cheese: 1,
+  'SChicken Breasts': 4,
+  Apples: 1,
+  Tomato: 2,
+  Potato: 1,
+};
+
+let alicesShoppingList: object = {
+  Rice: 1,
+  Eggs: 5,
+  'Chicken Breasts': 2,
+  Apples: 1,
+  Tomato: 10,
+};
 // Create an application which solves the following problems.
-function totalToSpend(listOwner){
-    let totalSpent: number = 0;
 // How much does Bob pay?
-Object.keys
+function spendings(list: Object, priceList: Object): number {
+  let spendings: number = 0;
+  for (let i: number = 0; i < Object.keys(list).length; i++) {
+    for (let j: number = 0; j < Object.keys(priceList).length; j++) {
+      if (Object.keys(list)[i] === Object.keys(priceList)[j]) {
+        spendings += Object.values(list)[i] * Object.values(priceList)[j];
+      }
+    }
+  }
+  return spendings;
+}
+console.log(spendings(bobsShoppingList, ProductPriceList).toFixed(2));
 // How much does Alice pay?
+console.log(spendings(alicesShoppingList, ProductPriceList).toFixed(2));
 // Who buys more Rice?
 // Who buys more Potato?
 // Who buys more different products?
 // Who buys more products? (piece)
-
