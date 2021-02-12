@@ -8,8 +8,15 @@ const fs = require(`fs`);
 function decrypter(fileName: string): void {
   try {
     let fileToDecrypt = fs.readFileSync(fileName, `utf-8`);
-    fileToDecrypt.split(` `);
-    console.log(fileToDecrypt);
+    let splittedFile = fileToDecrypt.split(``);
+    let cryptedText: string[] = [];
+    for (let i: number = 0; i < splittedFile.length; i++) {
+      if (splittedFile[i] !== splittedFile[i + 1]) {
+        cryptedText.push(splittedFile[i]);
+      }
+    }
+    splittedFile = cryptedText.join(``);
+    fs.writeFileSync(`duplicated-chars.txt`, splittedFile);
   } catch (e) {
     console.log(`No such file.`);
   }
