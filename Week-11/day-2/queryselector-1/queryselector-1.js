@@ -13,6 +13,8 @@ console.log(businessLamp)
 // 3. store 'The King' and 'The Conceited Man'
 // in the 'conceitedKing' variable.
 // alert them one by one.
+const conceitedKing = [document.getElementById(`b325`), document.querySelector(`div.asteroid.b326`)]
+console.log(conceitedKing)
 // 4. store 'The King', 'The Conceited Man' and 'The Lamplighter'
 // in the 'noBusiness' variable.
 // console.log each of them.
