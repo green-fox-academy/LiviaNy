@@ -10,4 +10,4 @@ link.setAttribute(`href`, `https://www.greenfoxacademy.com/`)
 const secondButton = document.querySelector(`.this-one`)
 secondButton.setAttribute(`disabled`, true)
 //       Replace its text with 'Don't click me!'.
-
+secondButton.textContent = `Dont click me!`
