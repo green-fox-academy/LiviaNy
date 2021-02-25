@@ -7,6 +7,7 @@ image.setAttribute(`src` , `https://safety4sea.com/wp-content/uploads/2016/11/gr
 const link = document.querySelector(`a`)
 link.setAttribute(`href`, `https://www.greenfoxacademy.com/`)
 //       Disable the second button.
-
+const secondButton = document.querySelector(`.this-one`)
+secondButton.setAttribute(`disabled`, true)
 //       Replace its text with 'Don't click me!'.
 
