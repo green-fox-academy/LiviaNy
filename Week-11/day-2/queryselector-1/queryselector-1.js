@@ -20,3 +20,4 @@ console.log(conceitedKing)
 // console.log each of them.
 const noBusinesses = [document.getElementById(`b325`), document.querySelector(`div.asteroid.b326`),document.querySelector(`div.asteroid.b329.big`) ]
 // </script> */}
+console.log(noBusinesses)
