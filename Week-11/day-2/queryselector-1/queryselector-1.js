@@ -9,6 +9,7 @@ console.log(king)
 // in the 'businessLamp' variable.
 const businessLamp = [document.querySelector(`p`), document.querySelector(`div.asteroid.b329.big`)]
 // console.log each of them.
+console.log(businessLamp)
 // 3. store 'The King' and 'The Conceited Man'
 // in the 'conceitedKing' variable.
 // alert them one by one.
