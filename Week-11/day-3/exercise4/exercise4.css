@@ -34,12 +34,6 @@ li.link:nth-child(3) {
   flex-basis: 18%;
 }
 
-ul.item.header:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
 .item.content {
   display: flex;
   max-width: 500px;
