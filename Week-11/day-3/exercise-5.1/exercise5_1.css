@@ -11,7 +11,7 @@ header {
 
 .left.sidebar {
   background-color: #fea500;
-  flex-grow: 1;
+  width: 100px;
 }
 
 .main {
@@ -34,7 +34,7 @@ header {
 
 .right.sidebar {
   background-color: #81007f;
-  flex-grow: 1;
+  width: 100px;
 }
 
 footer {
