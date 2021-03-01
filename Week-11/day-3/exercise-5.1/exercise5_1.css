@@ -1,0 +1,43 @@
+.content {
+  height: 100%;
+  display: flex;
+  flex-flow: row;
+}
+
+header {
+  background-color: #00ffff;
+  height: 50px;
+}
+
+.left.sidebar {
+  background-color: #fea500;
+  flex-grow: 1;
+}
+
+.main {
+  margin: 0px 10px;
+  min-width: 100px;
+  height: 500px;
+  background-color: #fe0000;
+  flex-grow: 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.black {
+  background-color: black;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+.right.sidebar {
+  background-color: #81007f;
+  flex-grow: 1;
+}
+
+footer {
+  height: 50px;
+  background-color: #0000fe;
+}
