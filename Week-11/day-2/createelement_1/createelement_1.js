@@ -17,3 +17,7 @@ const newContent = document.createElement(`h2`)
 newContent.textContent=`I can add elements to the DOM!`
 content.appendChild(newContent)
 // Add an image, any image, to the container.
+const image = document.createElement(`img`)
+image.src = "https://images7.memedroid.com/images/UPLOADED983/5f7c55ff75e76.jpeg"
+
+content.appendChild(image)
