@@ -1,3 +1,4 @@
+// Each list item should have its category as a class and its content as text content. -->
 const planetData = [
   {
     category: 'inhabited',
@@ -51,4 +52,3 @@ if(planetData[i].asteroid){
         newElement.appendChild(textContent);
     }
 }
-// Each list item should have its category as a class and its content as text content. -->
