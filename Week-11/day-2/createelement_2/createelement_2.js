@@ -32,13 +32,23 @@ const king = document.querySelector(`li`);
 
 content.removeChild(king);
 // Fill the list based on the following list of objects.
-for(let i = 0; i < planetData.length; i++){
-    let newElement = document.createElement(`li`);
-    let textContent = document.createTextNode(planetData[i].content);
-    content.appendChild(newElement);
-    newElement.classList.add(`category`);
-    newElement.category = planetData[i].category;
-    newElement.appendChild(textContent);
-}
+    for(let i = 0; i < planetData.length; i++){
+        let newElement = document.createElement(`li`);
+        let textContent = document.createTextNode(planetData[i].content);
+        content.appendChild(newElement);
+        newElement.classList.add(`category`);
+        newElement.category = planetData[i].category;
+        newElement.appendChild(textContent);
+    }
 // Only add the asteroids to the list.
+for(let i = 0; i < planetData.length; i++){
+if(planetData[i].asteroid){
+    let newElement = document.createElement(`li`);
+        let textContent = document.createTextNode(planetData[i].content);
+        content.appendChild(newElement);
+        newElement.classList.add(`category`);
+        newElement.category = planetData[i].category;
+        newElement.appendChild(textContent);
+    }
+}
 // Each list item should have its category as a class and its content as text content. -->
