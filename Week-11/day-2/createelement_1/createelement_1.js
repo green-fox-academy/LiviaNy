@@ -7,5 +7,8 @@ newAsteroid.textContent = `The Green Fox`
 asteroidList.appendChild(newAsteroid)
 
 // Add an item that says 'The Lamplighter' to the asteroid list.
+const lamplighter = document.createElement(`li`)
+lamplighter.textContent = `The Lamplighter`
+asteroidList.appendChild(lamplighter)
 // Add a heading saying 'I can add elements to the DOM!' to the .container.
 // Add an image, any image, to the container.
