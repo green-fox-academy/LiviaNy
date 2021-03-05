@@ -1,0 +1,72 @@
+body {
+  background-image: linear-gradient(to right, grey 0%, #d0d0d0 50%, grey 100%);
+  /* display: flex;
+  justify-content: center; */
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#left-arrow {
+  display: flex;
+  justify-content: center;
+}
+
+#right-arrow {
+  display: flex;
+  justify-content: center;
+  transform: rotateY(180deg);
+}
+
+.arrow {
+  background-color: white;
+  cursor: pointer;
+  width: 70px;
+}
+
+.arrow:hover {
+  opacity: 0.3;
+}
+
+.arrow-image {
+  width: 50px;
+}
+
+#title-description-div {
+  position: relative;
+  top: -120px;
+  order: 1;
+  background-color: #0000008c;
+  color: white;
+  height: 100px;
+}
+
+#main-picture {
+  height: 700px;
+}
+
+#greatPicture {
+  order: 2;
+  height: 700px;
+}
+
+#slider {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  width: 100px;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 20px 2px;
+}
+
+.icon img {
+  width: 80px;
+  background-color: white;
+  padding: 5px;
+}

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="gallery-style.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Image Gallery</title>
   </head>
   <body>
@@ -12,14 +12,15 @@
     <div class="container">
       <div class="main">
         <div id="left-arrow" class="arrow">
-          <img src="./assets/arrow.svg" />
+          <img src="./assets/arrow.svg" class="arrow-image" />
         </div>
-        <div class="main-picture"></div>
+        <div id="main-picture"></div>
         <div id="right-arrow" class="arrow">
-          <img src="./assets/arrow.svg" />
+          <img src="./assets/arrow.svg" class="arrow-image" />
         </div>
       </div>
-      <div class="slider"></div>
+      <div id="slider"></div>
     </div>
+    <script src="./app.js"></script>
   </body>
 </html>
