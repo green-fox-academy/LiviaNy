@@ -1,7 +1,10 @@
 body {
   background-image: linear-gradient(to right, grey 0%, #d0d0d0 50%, grey 100%);
-  /* display: flex;
-  justify-content: center; */
+}
+
+#title {
+  width: 20%;
+  margin: 10px 45%;
 }
 
 .main {
@@ -37,11 +40,22 @@ body {
 
 #title-description-div {
   position: relative;
-  top: -120px;
+  top: -123px;
   order: 1;
   background-color: #0000008c;
   color: white;
   height: 100px;
+  padding: 10px;
+}
+
+#great-title {
+  font-size: 28px;
+  margin: 0%;
+  font-style: inherit;
+}
+
+#great-description {
+  font-style: oblique;
 }
 
 #main-picture {
@@ -56,6 +70,12 @@ body {
 #slider {
   display: flex;
   justify-content: center;
+}
+
+.icon img:hover {
+  opacity: 0.3;
+  width: 100%;
+  padding: 0;
 }
 
 .icon {
