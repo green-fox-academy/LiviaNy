@@ -19,10 +19,10 @@ for(let i =0; i< kids.length;i++){
     const newArticle = document.createElement(`article`);
     main.appendChild(newArticle);
 }
-
 //   2) Create a <h3> and a <p> element for each article and append them as a child to the <article>
 //       - The H3 should contain the owner's name
 //       - The p should contain the pet's name
+//   3) Add the article to the pets main.
 for(let i =0; i< kids.length;i++){
 const newH = document.createElement(`h3`);
 const newP = document.createElement(`p`);
@@ -31,5 +31,3 @@ newP.textContent = kids[i].petName;
 newArticle[i].appendChild(newH);
 newArticle[i].appendChild(newP);
 }
-
-//   3) Add the article to the pets main.
