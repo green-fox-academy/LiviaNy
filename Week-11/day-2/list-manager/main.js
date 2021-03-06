@@ -58,3 +58,33 @@ const thirdBox = document.createElement(`p`);
 rightBox.appendChild(thirdBox);
 const fourthBox = document.createElement(`p`);
 rightBox.appendChild(fourthBox);
+
+let breadClick = false;
+let milkClick = false;
+let orangeClick = false;
+let tomatoClick = false;
+bread.onclick = () => {
+  if (!breadClick) {
+    breadClick = true;
+  } else {
+    breadClick = false;
+  }
+  if (breadClick) {
+    bread.style.backgroundColor = `grey`;
+  } else {
+    bread.style.backgroundColor = null;
+  }
+};
+
+milk.onclick = () => {
+  if (!milkClick) {
+    milkClick = true;
+  } else {
+    milkClick = false;
+  }
+  if (milkClick) {
+    milk.style.backgroundColor = `grey`;
+  } else {
+    milk.style.backgroundColor = null;
+  }
+};
