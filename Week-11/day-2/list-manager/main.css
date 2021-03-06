@@ -1,0 +1,51 @@
+#container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row;
+}
+
+#left-box {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  border: 2px solid black;
+  width: 100px;
+  margin: 10px;
+}
+
+#left-box p {
+  margin: 0px;
+  font-size: 18px;
+}
+
+#left-box p:hover {
+  background-color: #b8b6b6;
+}
+
+#mid-box {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 100px;
+}
+
+#mid-box button:hover {
+  opacity: 0.3;
+}
+
+#right-box {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  border: 2px solid black;
+  width: 100px;
+  margin: 10px;
+}
+
+#right-box p {
+  margin: 0px;
+}
+
+#right-box p:hover {
+  background-color: #b8b6b6;
+}
