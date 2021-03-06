@@ -11,18 +11,22 @@ const elements = [
   {
     id: `bread`,
     onclicked: false,
+    p: null,
   },
   {
     id: `milk`,
     onclicked: false,
+    p: null,
   },
   {
     id: `orange`,
     onclicked: false,
+    p: null,
   },
   {
     id: `tomato`,
     onclicked: false,
+    p: null,
   },
 ];
 
@@ -58,17 +62,13 @@ midBox.appendChild(x);
 const down = document.createElement(`button`);
 down.innerText = `Down`;
 midBox.appendChild(down);
-const firstBox = document.createElement(`p`);
-rightBox.appendChild(firstBox);
-const secondBox = document.createElement(`p`);
-rightBox.appendChild(secondBox);
-const thirdBox = document.createElement(`p`);
-rightBox.appendChild(thirdBox);
-const fourthBox = document.createElement(`p`);
-rightBox.appendChild(fourthBox);
+for (let i = 0; i < elements.length; i++) {
+  const boxContent = document.createElement(`p`);
+  boxContent.innerText = elements[i].p;
+  rightBox.appendChild(boxContent);
+}
 
 const leftBoxElements = document.querySelectorAll(`#left-box p`);
-
 leftBoxElements.forEach((element) => {
   element.onclick = () => {
     if (!element.onclicked) {
@@ -98,9 +98,14 @@ x.onclick = () => {
 };
 
 angleBracket.onclick = () => {
-  elements.forEach((element) => {
+  leftBoxElements.forEach((element) => {
     if (element.onclicked) {
-      product.remove();
+      element.remove();
     }
+    //     if (element.onclicked) {
+    //       element.style.backgroundColor = `grey`;
+    //     } else {
+    //       element.style.backgroundColor = null;
+    //     }
   });
 };
