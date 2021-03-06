@@ -68,6 +68,7 @@ const fourthBox = document.createElement(`p`);
 rightBox.appendChild(fourthBox);
 
 const leftBoxElements = document.querySelectorAll(`#left-box p`);
+
 leftBoxElements.forEach((element) => {
   element.onclick = () => {
     if (!element.onclicked) {
@@ -83,4 +84,23 @@ leftBoxElements.forEach((element) => {
   };
 });
 
-angleBracket.onclick = () => {};
+x.onclick = () => {
+  leftBoxElements.forEach((element) => {
+    if (element.onclicked) {
+      element.onclicked = false;
+    }
+    if (element.onclicked) {
+      element.style.backgroundColor = `grey`;
+    } else {
+      element.style.backgroundColor = null;
+    }
+  });
+};
+
+angleBracket.onclick = () => {
+  elements.forEach((element) => {
+    if (element.onclicked) {
+      product.remove();
+    }
+  });
+};
