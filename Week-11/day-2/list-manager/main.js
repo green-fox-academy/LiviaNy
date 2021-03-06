@@ -62,13 +62,14 @@ midBox.appendChild(x);
 const down = document.createElement(`button`);
 down.innerText = `Down`;
 midBox.appendChild(down);
-for (let i = 0; i < elements.length; i++) {
-  const boxContent = document.createElement(`p`);
-  boxContent.innerText = elements[i].p;
-  rightBox.appendChild(boxContent);
-}
+// for (let i = 0; i < elements.length; i++) {
+//   const boxContent = document.createElement(`p`);
+//   boxContent.innerText = elements[i].p;
+//   rightBox.appendChild(boxContent);
+// }
 
 const leftBoxElements = document.querySelectorAll(`#left-box p`);
+const rightBoxElements = document.querySelectorAll(`#right-box p`);
 leftBoxElements.forEach((element) => {
   element.onclick = () => {
     if (!element.onclicked) {
@@ -98,14 +99,13 @@ x.onclick = () => {
 };
 
 angleBracket.onclick = () => {
-  leftBoxElements.forEach((element) => {
-    if (element.onclicked) {
-      element.remove();
+  leftBoxElements.forEach((leftElement) => {
+    if (leftElement.onclicked) {
+      leftElement.innerText = null;
+      leftElement.onclicked = false;
+      const boxContent = document.createElement(`p`);
+      boxContent.innerText = `${leftElement.id}`;
+      rightBox.appendChild(boxContent);
     }
-    //     if (element.onclicked) {
-    //       element.style.backgroundColor = `grey`;
-    //     } else {
-    //       element.style.backgroundColor = null;
-    //     }
   });
 };
