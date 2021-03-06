@@ -10,19 +10,19 @@
 const elements = [
   {
     id: `bread`,
-    onclick: false,
+    onclicked: false,
   },
   {
     id: `milk`,
-    onclick: false,
+    onclicked: false,
   },
   {
     id: `orange`,
-    onclick: false,
+    onclicked: false,
   },
   {
     id: `tomato`,
-    onclick: false,
+    onclicked: false,
   },
 ];
 
@@ -67,60 +67,20 @@ rightBox.appendChild(thirdBox);
 const fourthBox = document.createElement(`p`);
 rightBox.appendChild(fourthBox);
 
-let breadClick = false;
-let milkClick = false;
-let orangeClick = false;
-let tomatoClick = false;
-bread.onclick = () => {
-  if (!breadClick) {
-    breadClick = true;
-  } else {
-    breadClick = false;
-  }
-  if (breadClick) {
-    bread.style.backgroundColor = `grey`;
-  } else {
-    bread.style.backgroundColor = null;
-  }
-};
-
-milk.onclick = () => {
-  if (!milkClick) {
-    milkClick = true;
-  } else {
-    milkClick = false;
-  }
-  if (milkClick) {
-    milk.style.backgroundColor = `grey`;
-  } else {
-    milk.style.backgroundColor = null;
-  }
-};
-
-orange.onclick = () => {
-  if (!orangeClick) {
-    orangeClick = true;
-  } else {
-    orangeClick = false;
-  }
-  if (orangeClick) {
-    orange.style.backgroundColor = `grey`;
-  } else {
-    orange.style.backgroundColor = null;
-  }
-};
-
-tomato.onclick = () => {
-  if (!tomatoClick) {
-    tomatoClick = true;
-  } else {
-    tomatoClick = false;
-  }
-  if (tomatoClick) {
-    tomato.style.backgroundColor = `grey`;
-  } else {
-    tomato.style.backgroundColor = null;
-  }
-};
+const leftBoxElements = document.querySelectorAll(`#left-box p`);
+leftBoxElements.forEach((element) => {
+  element.onclick = () => {
+    if (!element.onclicked) {
+      element.onclicked = true;
+    } else {
+      element.onclicked = false;
+    }
+    if (element.onclicked) {
+      element.style.backgroundColor = `grey`;
+    } else {
+      element.style.backgroundColor = null;
+    }
+  };
+});
 
 angleBracket.onclick = () => {};
