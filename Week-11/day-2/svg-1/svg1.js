@@ -8,3 +8,5 @@ rectangle.setAttribute(`x`, `50`);
 rectangle.setAttribute(`y`, `50`);
 
 // 3) Change its fill to tomato
+
+rectangle.setAttribute(`fill`, `tomato`);
