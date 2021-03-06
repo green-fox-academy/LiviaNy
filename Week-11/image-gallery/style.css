@@ -50,12 +50,14 @@ body {
 
 #great-title {
   font-size: 28px;
-  margin: 0%;
+  margin: 0px 100px;
   font-style: inherit;
 }
 
 #great-description {
   font-style: oblique;
+  max-width: 700px;
+  margin-left: 50px;
 }
 
 #main-picture {
