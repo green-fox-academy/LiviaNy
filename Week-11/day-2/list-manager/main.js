@@ -88,3 +88,29 @@ milk.onclick = () => {
     milk.style.backgroundColor = null;
   }
 };
+
+orange.onclick = () => {
+  if (!orangeClick) {
+    orangeClick = true;
+  } else {
+    orangeClick = false;
+  }
+  if (orangeClick) {
+    orange.style.backgroundColor = `grey`;
+  } else {
+    orange.style.backgroundColor = null;
+  }
+};
+
+tomato.onclick = () => {
+  if (!tomatoClick) {
+    tomatoClick = true;
+  } else {
+    tomatoClick = false;
+  }
+  if (tomatoClick) {
+    tomato.style.backgroundColor = `grey`;
+  } else {
+    tomato.style.backgroundColor = null;
+  }
+};
