@@ -7,6 +7,24 @@
 //     - If "X" is clicked the selected item should be removed and the first item should be selected
 //     - If ">" is clicked the selected item should be moved to the right side and the first item on the left side should be selected
 // 5, Check all the edge cases, no error should be printed to the console
+const elements = [
+  {
+    id: `bread`,
+    onclick: false,
+  },
+  {
+    id: `milk`,
+    onclick: false,
+  },
+  {
+    id: `orange`,
+    onclick: false,
+  },
+  {
+    id: `tomato`,
+    onclick: false,
+  },
+];
 
 const body = document.querySelector(`body`);
 
@@ -22,22 +40,12 @@ container.appendChild(midBox);
 const rightBox = document.createElement(`div`);
 rightBox.setAttribute(`id`, `right-box`);
 container.appendChild(rightBox);
-const bread = document.createElement(`p`);
-bread.setAttribute(`id`, `bread`);
-bread.innerText = `bread`;
-leftBox.appendChild(bread);
-const milk = document.createElement(`p`);
-milk.setAttribute(`id`, `milk`);
-milk.innerText = `milk`;
-leftBox.appendChild(milk);
-const orange = document.createElement(`p`);
-orange.setAttribute(`id`, `orange`);
-orange.innerText = `orange`;
-leftBox.appendChild(orange);
-const tomato = document.createElement(`p`);
-tomato.setAttribute(`id`, `tomato`);
-tomato.innerText = `tomato`;
-leftBox.appendChild(tomato);
+for (let i = 0; i < elements.length; i++) {
+  const element = document.createElement(`p`);
+  element.setAttribute(`id`, elements[i].id);
+  element.innerText = elements[i].id;
+  leftBox.appendChild(element);
+}
 const up = document.createElement(`button`);
 up.innerText = `Up`;
 midBox.appendChild(up);
@@ -114,3 +122,5 @@ tomato.onclick = () => {
     tomato.style.backgroundColor = null;
   }
 };
+
+angleBracket.onclick = () => {};
