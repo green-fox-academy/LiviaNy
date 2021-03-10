@@ -62,11 +62,6 @@ midBox.appendChild(x);
 const down = document.createElement(`button`);
 down.innerText = `Down`;
 midBox.appendChild(down);
-// for (let i = 0; i < elements.length; i++) {
-//   const boxContent = document.createElement(`p`);
-//   boxContent.innerText = elements[i].p;
-//   rightBox.appendChild(boxContent);
-// }
 
 const leftBoxElements = document.querySelectorAll(`#left-box p`);
 const rightBoxElements = document.querySelectorAll(`#right-box p`);
