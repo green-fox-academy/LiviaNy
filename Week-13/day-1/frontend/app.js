@@ -53,6 +53,20 @@ app.get(`/greeter`, (req, res) => {
   }
 });
 
+app.get(`/appenda/:appendable`, (req, res) => {
+  const { appendable } = req.params;
+
+  if (!appendable) {
+    res.status(404);
+  } else {
+    const appendedWithA = appendable + `a`;
+    const appendedResposnse = {
+      appended: appendedWithA,
+    };
+    res.json(appendedResposnse);
+  }
+});
+
 app.listen(PORT, () => {
   `Server now listens to PORT 3000`;
 });
