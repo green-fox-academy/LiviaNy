@@ -30,6 +30,29 @@ app.get(`/doubling/`, (req, res) => {
   }
 });
 
+app.get(`/greeter`, (req, res) => {
+  const { name, title } = req.query;
+
+  if (!name && !title) {
+    res.status(400).json({
+      error: `Please provide a name and a title!`,
+    });
+  } else if (!title) {
+    res.status(400).json({
+      error: `Please provide a title!`,
+    });
+  } else if (!name) {
+    res.status(400).json({
+      error: `Please provide a name!`,
+    });
+  } else {
+    const responseObject = {
+      welcome_message: `Oh, hi there ${name}, my dear ${title}!`,
+    };
+    res.json(responseObject);
+  }
+});
+
 app.listen(PORT, () => {
   `Server now listens to PORT 3000`;
 });
