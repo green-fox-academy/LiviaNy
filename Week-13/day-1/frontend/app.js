@@ -7,11 +7,13 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.static(`assets`));
+app.use(express.json());
 
 app.get(`/`, (req, res) => {
   res.sendFile(path.join(__dirname, `index.html`));
 });
 
+//doubling
 app.get(`/doubling/`, (req, res) => {
   const { input } = req.query;
 
@@ -30,6 +32,7 @@ app.get(`/doubling/`, (req, res) => {
   }
 });
 
+//greeter
 app.get(`/greeter`, (req, res) => {
   const { name, title } = req.query;
 
@@ -53,6 +56,7 @@ app.get(`/greeter`, (req, res) => {
   }
 });
 
+//appendA
 app.get(`/appenda/:appendable`, (req, res) => {
   const { appendable } = req.params;
 
@@ -67,6 +71,39 @@ app.get(`/appenda/:appendable`, (req, res) => {
   }
 });
 
+//doUntil
+function sum(number) {
+  if (number <= 1) {
+    return 1;
+  } else {
+    return number + sum(number - 1);
+  }
+}
+
+function factor(number) {
+  if (number <= 1) {
+    return 1;
+  } else {
+    return number * factor(number - 1);
+  }
+}
+
+app.post(`/dountil/:action`, (req, res) => {
+  const number = req.body.until;
+  const { action } = req.params;
+  if (action === `sum`) {
+    let result = sum(number);
+    res.json({ result: result });
+  } else if (action === `factor`) {
+    let result = factor(number);
+    res.json({ result: result });
+  } else {
+    res.json({
+      error: `Please provide a number!`,
+    });
+  }
+});
+
 app.listen(PORT, () => {
-  `Server now listens to PORT 3000`;
+  `Server now listens to PORT ${PORT}`;
 });
