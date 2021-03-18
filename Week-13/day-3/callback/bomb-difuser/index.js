@@ -5,10 +5,10 @@
 const timer = document.querySelector(`.display`);
 const bomb = document.querySelector(`button`);
 
-function bombDeffuser() {
-  setTimeout(() => {
-    bomb.removeEventListener(`click`);
-  });
+bomb.addEventListener(`click`, defuser);
+function defuser() {
+  timer.textContent = `Bomb defused`;
+  clearInterval(timeCounter);
 }
 
 const timeCounter = setInterval(() => {
