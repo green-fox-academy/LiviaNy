@@ -11,16 +11,6 @@ function bombDeffuser() {
   });
 }
 
-// const timeCounter = setInterval(() => {
-//     const timeCounter = setInterval(() => {
-//       let counter = parseInt(timer.innerText);
-//       let setTime = setInterval(() => {
-//         if (counter === 0) {
-//           timer.innerText(`Bomb exploded`);
-//           clearInterval(timeCounter);
-//         } else {
-//           document.querySelector(`.display`).textContent = counter - 1;
-// }}),1000}
 const timeCounter = setInterval(() => {
   let counter = parseInt(timer.innerHTML);
   timer.textContent = counter - 1;
