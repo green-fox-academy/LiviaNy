@@ -78,20 +78,20 @@ let counter = 0;
 const rightArrow = document.querySelector(`#right-arrow`);
 const leftArrow = document.querySelector(`#left-arrow`);
 rightArrow.onclick = () => {
-  if (counter >= pictures.length - 1) {
-    counter = 0;
+  if (index >= pictures.length - 1) {
+    index = 0;
   }
-  counter++;
-  greatPicture.setAttribute(`src`, pictures[counter].URL);
-  greatTitle.innerText = pictures[counter].title;
-  greatDescription.innerText = pictures[counter].description;
+  index++;
+  greatPicture.setAttribute(`src`, pictures[index].URL);
+  greatTitle.innerText = pictures[index].title;
+  greatDescription.innerText = pictures[index].description;
 };
 leftArrow.onclick = () => {
-  if (counter === 0) {
-    counter = pictures.length;
+  if (index === 0) {
+    index = pictures.length;
   }
-  counter--;
-  greatPicture.setAttribute(`src`, pictures[counter].URL);
-  greatTitle.innerText = pictures[counter].title;
-  greatDescription.innerText = pictures[counter].description;
+  index--;
+  greatPicture.setAttribute(`src`, pictures[index].URL);
+  greatTitle.innerText = pictures[index].title;
+  greatDescription.innerText = pictures[index].description;
 };

@@ -1,10 +1,11 @@
 `use strict`;
 
-const express = require(`express`);
-const path = require(`path`);
+import express from 'express';
 
 const app = express();
 const PORT = 3000;
+
+app.use(express.json());
 
 function sum(array) {
   let result = 0;
@@ -29,8 +30,6 @@ function double(array) {
   });
   return result;
 }
-
-app.use(express.json());
 
 app.post(`/arrays/`, (req, res) => {
   const what = req.body.what;
