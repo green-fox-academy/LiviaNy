@@ -1,10 +1,11 @@
 `use strict`;
 
+import cors from 'cors';
 import express from 'express';
 import mysql from 'mysql';
 
 const app = express();
-const PORT = 8080;
+const PORT = 3000;
 
 let conn = mysql.createConnection({
   host: `localhost`,
@@ -23,6 +24,7 @@ conn.connect((err) => {
 
 app.use('/', express.static('public'));
 app.use(express.json());
+app.use(cors());
 
 app.get(`/`, (req, res) => {
   res.send(`Server works perfectly`);

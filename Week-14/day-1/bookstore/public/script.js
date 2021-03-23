@@ -1,6 +1,6 @@
 `use strict`;
 
-const url = `localhost:8080`;
+const url = `localhost:3000`;
 
 const xhr = new XMLHttpRequest();
 xhr.onload = () => {
