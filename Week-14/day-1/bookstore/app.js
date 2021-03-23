@@ -4,7 +4,7 @@ import express from 'express';
 import mysql from 'mysql';
 
 const app = express();
-const PORT = 3000;
+const PORT = 8080;
 
 let conn = mysql.createConnection({
   host: `localhost`,
@@ -21,7 +21,7 @@ conn.connect((err) => {
   console.log(`Connected to mysql`);
 });
 
-app.use(express.static(`public`));
+app.use('/', express.static('public'));
 app.use(express.json());
 
 app.get(`/`, (req, res) => {
