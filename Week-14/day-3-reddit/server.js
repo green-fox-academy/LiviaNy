@@ -30,17 +30,20 @@ app.get(`/hello`, (req, res) => {
 });
 
 app.get(`/posts`, (req, res) => {
-  res.set(`Content-type`, `application/json`);
-  conn.query(`SELECT * FROM post`, (err, result) => {
+  req.accepts('application/json');
+  req.header(`Content-type`, `application/json`);
+  conn.query(`SELECT * FROM post WHERE is_active = true`, (err, result) => {
     if (err) {
       res.status(500).json({ error: `database error` });
       return;
     }
-    return res.status(200).json({ posts: result });
+    return res.status(200).contentType(`application/json`).json({ posts: result });
   });
 });
 
 app.post(`/posts`, (req, res) => {
+  req.accepts('application/json');
+  req.header(`Content-type`, `application/json`);
   const { title, url } = req.body;
   conn.query(`INSERT INTO post SET ?`, { title, url }, (err, result) => {
     if (err) {
@@ -61,6 +64,8 @@ app.post(`/posts`, (req, res) => {
 });
 
 app.put(`/posts/:id/upvote`, (req, res) => {
+  req.accepts('application/json');
+  req.header(`Content-type`, `application/json`);
   const { id } = req.params;
   conn.query(`SELECT * FROM post WHERE id = ${id};`, (err, result) => {
     if (err) {
@@ -78,6 +83,8 @@ app.put(`/posts/:id/upvote`, (req, res) => {
 });
 
 app.put(`/posts/:id/downvote`, (req, res) => {
+  req.accepts('application/json');
+  req.header(`Content-type`, `application/json`);
   const { id } = req.params;
   conn.query(`SELECT * FROM post WHERE id = ${id};`, (err, result) => {
     if (err) {
@@ -89,6 +96,26 @@ app.put(`/posts/:id/downvote`, (req, res) => {
         res.status(500).json({ error: `database error` });
         return;
       }
+      return res.json({ result });
+    });
+  });
+});
+
+app.delete(`/posts/:id`, (req, res) => {
+  req.accepts('application/json');
+  req.header(`Content-type`, `application/json`);
+  const { id } = req.params;
+  conn.query(`SELECT * FROM post WHERE id = ${id};`, (err, result) => {
+    if (err) {
+      res.status(500).json({ error: `database error` });
+      return;
+    }
+    conn.query(`UPDATE post SET is_active = false WHERE id =${id}`, (err, row) => {
+      if (err) {
+        res.json({ error: `database error` });
+        return;
+      }
+      console.log(result);
       return res.json({ result });
     });
   });
