@@ -67,18 +67,28 @@ app.put(`/posts/:id/upvote`, (req, res) => {
   req.accepts('application/json');
   req.header(`Content-type`, `application/json`);
   const { id } = req.params;
-  conn.query(`SELECT * FROM post WHERE id = ${id};`, (err, result) => {
+  conn.query(`SELECT * FROM post WHERE id = ? ;`, id, (err, result) => {
     if (err) {
       res.status(500).json({ error: `database error` });
       return;
     }
-    conn.query(`UPDATE post SET score = ${result[0].score + 1} WHERE id = ${id};`, (err, row) => {
-      if (err) {
-        res.status(500).json({ error: `database error` });
-        return;
+    conn.query(
+      `UPDATE post SET score = ${result[0].score + 1}, vote= ${result[0].vote + 1} WHERE id = ?;`,
+      id,
+      (err, row) => {
+        if (err) {
+          res.status(500).json({ error: `database error` });
+          return;
+        }
+        conn.query(`SELECT * FROM post WHERE id =?`, id, (err, row) => {
+          if (err) {
+            res.json({ error: `database error` });
+            return;
+          }
+          return res.json({ row });
+        });
       }
-      return res.json({ result });
-    });
+    );
   });
 });
 
@@ -86,18 +96,28 @@ app.put(`/posts/:id/downvote`, (req, res) => {
   req.accepts('application/json');
   req.header(`Content-type`, `application/json`);
   const { id } = req.params;
-  conn.query(`SELECT * FROM post WHERE id = ${id};`, (err, result) => {
+  conn.query(`SELECT * FROM post WHERE id = ? ;`, id, (err, result) => {
     if (err) {
       res.status(500).json({ error: `database error` });
       return;
     }
-    conn.query(`UPDATE post SET score = ${result[0].score - 1} WHERE id = ${id};`, (err, row) => {
-      if (err) {
-        res.status(500).json({ error: `database error` });
-        return;
+    conn.query(
+      `UPDATE post SET score = ${result[0].score - 1}, vote= ${result[0].vote - 1} WHERE id = ?;`,
+      id,
+      (err, row) => {
+        if (err) {
+          res.status(500).json({ error: `database error` });
+          return;
+        }
+        conn.query(`SELECT * FROM post WHERE id =?`, id, (err, row) => {
+          if (err) {
+            res.json({ error: `database error` });
+            return;
+          }
+          return res.json({ row });
+        });
       }
-      return res.json({ result });
-    });
+    );
   });
 });
 
@@ -105,17 +125,22 @@ app.delete(`/posts/:id`, (req, res) => {
   req.accepts('application/json');
   req.header(`Content-type`, `application/json`);
   const { id } = req.params;
-  conn.query(`SELECT * FROM post WHERE id = ${id};`, (err, result) => {
+  conn.query(`SELECT * FROM post WHERE id = ?;`, id, (err, result) => {
     if (err) {
       res.status(500).json({ error: `database error` });
       return;
     }
-    conn.query(`UPDATE post SET is_active = false WHERE id =${id}`, (err, row) => {
+    conn.query(`UPDATE post SET is_active = false WHERE id =?`, id, (err, row) => {
       if (err) {
         res.json({ error: `database error` });
         return;
       }
-      return res.json({ result });
+      conn.query(`SELECT * FROM post WHERE id =?`, id, (err, row) => {
+        if (err) {
+          res.json({ error: `database error` });
+        }
+        return res.json({ result });
+      });
     });
   });
 });
@@ -125,17 +150,17 @@ app.put(`/posts/:id`, (req, res) => {
   req.header(`Content-type`, `application/json`);
   const { title, url } = req.body;
   const { id } = req.params;
-  conn.query(`SELECT * FROM post WHERE id = ${id};`, (err, result) => {
+  conn.query(`SELECT * FROM post WHERE id = ?`, id, (err, result) => {
     if (err) {
       res.json({ error: `database error1` });
       return;
     }
-    conn.query(`UPDATE post SET title = ${title}, url = ${url} WHERE id =${id};`, (err, row) => {
+    conn.query(`UPDATE post SET title = ?, url = ? WHERE id = ?`, title, url, id, (err, row) => {
       if (err) {
-        res.status(500).json({ error: `database error2` });
+        res.json({ error: `database error2` });
         return;
       }
-      return res.json({ result });
+      res.json({ result });
     });
   });
 });
