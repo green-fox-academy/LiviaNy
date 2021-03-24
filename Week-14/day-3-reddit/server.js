@@ -50,41 +50,46 @@ app.post(`/posts`, (req, res) => {
     if (title === undefined || url === undefined) {
       res.json({ error: `missing data, please feed me some data` });
     } else {
-      res.sendStatus(200);
+      conn.query(`SELECT * FROM post WHERE id = ${result.insertId}`, (err, row) => {
+        if (err) {
+          res.json({ error: `database error` });
+        }
+        res.status(200).json({ row });
+      });
     }
   });
 });
 
 app.put(`/posts/:id/upvote`, (req, res) => {
   const { id } = req.params;
-  conn.query(`SELECT score FROM post WHERE id = ${id};`, (err, result) => {
+  conn.query(`SELECT * FROM post WHERE id = ${id};`, (err, result) => {
     if (err) {
       res.status(500).json({ error: `database error` });
       return;
     }
-    conn.query(`UPDATE post SET score = ${result[0].score + 1} WHERE id = ${id};`, (err, result) => {
+    conn.query(`UPDATE post SET score = ${result[0].score + 1} WHERE id = ${id};`, (err, row) => {
       if (err) {
         res.status(500).json({ error: `database error` });
         return;
       }
-      return res.json({ post: result });
+      return res.json({ result });
     });
   });
 });
 
 app.put(`/posts/:id/downvote`, (req, res) => {
   const { id } = req.params;
-  conn.query(`SELECT score FROM post WHERE id = ${id};`, (err, result) => {
+  conn.query(`SELECT * FROM post WHERE id = ${id};`, (err, result) => {
     if (err) {
       res.status(500).json({ error: `database error` });
       return;
     }
-    conn.query(`UPDATE post SET score = ${result[0].score - 1} WHERE id = ${id};`, (err, result) => {
+    conn.query(`UPDATE post SET score = ${result[0].score - 1} WHERE id = ${id};`, (err, row) => {
       if (err) {
         res.status(500).json({ error: `database error` });
         return;
       }
-      return res.json({ post: result });
+      return res.json({ result });
     });
   });
 });
