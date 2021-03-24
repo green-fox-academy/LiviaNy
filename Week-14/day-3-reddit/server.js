@@ -23,6 +23,7 @@ conn.connect((err) => {
 });
 
 app.use(express.static(`public`));
+app.use(express.json());
 
 app.get(`/hello`, (req, res) => {
   res.send(`Hello world`);
@@ -35,7 +36,22 @@ app.get(`/post`, (req, res) => {
       res.status(500).json({ errror: `database error` });
       return;
     }
-    return res.json({ post: result });
+    return res.status(200).json({ result });
+  });
+});
+
+app.post(`/post`, (req, res) => {
+  const { title, url } = req.body;
+  conn.query(`INSERT INTO post SET ?`, { title, url }, (err, result) => {
+    if (err) {
+      res.sendStatus(500).json({ error: `database error` });
+      return;
+    }
+    if (title === undefined || url === undefined) {
+      res.json({ error: `missing data, please feed me some data` });
+    } else {
+      res.sendStatus(200);
+    }
   });
 });
 
