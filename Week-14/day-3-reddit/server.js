@@ -29,18 +29,18 @@ app.get(`/hello`, (req, res) => {
   res.send(`Hello world`);
 });
 
-app.get(`/post`, (req, res) => {
+app.get(`/posts`, (req, res) => {
   res.set(`Content-type`, `application/json`);
   conn.query(`SELECT * FROM post`, (err, result) => {
     if (err) {
-      res.status(500).json({ errror: `database error` });
+      res.status(500).json({ error: `database error` });
       return;
     }
-    return res.status(200).json({ result });
+    return res.status(200).json({ posts: result });
   });
 });
 
-app.post(`/post`, (req, res) => {
+app.post(`/posts`, (req, res) => {
   const { title, url } = req.body;
   conn.query(`INSERT INTO post SET ?`, { title, url }, (err, result) => {
     if (err) {
@@ -52,6 +52,40 @@ app.post(`/post`, (req, res) => {
     } else {
       res.sendStatus(200);
     }
+  });
+});
+
+app.put(`/posts/:id/upvote`, (req, res) => {
+  const { id } = req.params;
+  conn.query(`SELECT score FROM post WHERE id = ${id};`, (err, result) => {
+    if (err) {
+      res.status(500).json({ error: `database error` });
+      return;
+    }
+    conn.query(`UPDATE post SET score = ${result[0].score + 1} WHERE id = ${id};`, (err, result) => {
+      if (err) {
+        res.status(500).json({ error: `database error` });
+        return;
+      }
+      return res.json({ post: result });
+    });
+  });
+});
+
+app.put(`/posts/:id/downvote`, (req, res) => {
+  const { id } = req.params;
+  conn.query(`SELECT score FROM post WHERE id = ${id};`, (err, result) => {
+    if (err) {
+      res.status(500).json({ error: `database error` });
+      return;
+    }
+    conn.query(`UPDATE post SET score = ${result[0].score - 1} WHERE id = ${id};`, (err, result) => {
+      if (err) {
+        res.status(500).json({ error: `database error` });
+        return;
+      }
+      return res.json({ post: result });
+    });
   });
 });
 
