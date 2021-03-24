@@ -115,7 +115,26 @@ app.delete(`/posts/:id`, (req, res) => {
         res.json({ error: `database error` });
         return;
       }
-      console.log(result);
+      return res.json({ result });
+    });
+  });
+});
+
+app.put(`/posts/:id`, (req, res) => {
+  req.accepts('application/json');
+  req.header(`Content-type`, `application/json`);
+  const { title, url } = req.body;
+  const { id } = req.params;
+  conn.query(`SELECT * FROM post WHERE id = ${id};`, (err, result) => {
+    if (err) {
+      res.json({ error: `database error1` });
+      return;
+    }
+    conn.query(`UPDATE post SET title = ${title}, url = ${url} WHERE id =${id};`, (err, row) => {
+      if (err) {
+        res.status(500).json({ error: `database error2` });
+        return;
+      }
       return res.json({ result });
     });
   });
