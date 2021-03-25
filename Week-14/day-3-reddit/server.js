@@ -53,7 +53,7 @@ app.post(`/posts`, (req, res) => {
     if (title === undefined || url === undefined) {
       res.json({ error: `missing data, please feed me some data` });
     } else {
-      conn.query(`SELECT * FROM post WHERE id = ${result.insertId}`, (err, row) => {
+      conn.query(`SELECT * FROM post WHERE id = ?`, result.insertId, (err, row) => {
         if (err) {
           res.json({ error: `database error` });
         }
@@ -73,8 +73,8 @@ app.put(`/posts/:id/upvote`, (req, res) => {
       return;
     }
     conn.query(
-      `UPDATE post SET score = ${result[0].score + 1}, vote= ${result[0].vote + 1} WHERE id = ?;`,
-      id,
+      `UPDATE post SET score = ?, vote= ? WHERE id = ?;`,
+      [result[0].score + 1, result[0].vote + 1, id],
       (err, row) => {
         if (err) {
           res.status(500).json({ error: `database error` });
@@ -102,8 +102,8 @@ app.put(`/posts/:id/downvote`, (req, res) => {
       return;
     }
     conn.query(
-      `UPDATE post SET score = ${result[0].score - 1}, vote= ${result[0].vote - 1} WHERE id = ?;`,
-      id,
+      `UPDATE post SET score =?, vote= ? WHERE id = ?;`,
+      [result[0].score - 1, result[0].vote - 1, id],
       (err, row) => {
         if (err) {
           res.status(500).json({ error: `database error` });
@@ -155,7 +155,7 @@ app.put(`/posts/:id`, (req, res) => {
       res.json({ error: `database error1` });
       return;
     }
-    conn.query(`UPDATE post SET title = ?, url = ? WHERE id = ?`, title, url, id, (err, row) => {
+    conn.query(`UPDATE post SET title = ?, url = ? WHERE id = ?`, [title, url, id], (err, row) => {
       if (err) {
         res.json({ error: `database error2` });
         return;
