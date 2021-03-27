@@ -14,7 +14,7 @@ const lollies = document.querySelector(`.lollypops`);
 const speed = document.querySelector(`.speed`);
 
 createCandies.addEventListener(`click`, () => {
-  parseInt((candies.textContent = 100));
+  parseInt(candies.textContent++);
 });
 
 buyLollies.addEventListener(`click`, () => {
