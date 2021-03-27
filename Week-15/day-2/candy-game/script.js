@@ -13,11 +13,11 @@ const candies = document.querySelector(`.candies`);
 const lollies = document.querySelector(`.lollypops`);
 const speed = document.querySelector(`.speed`);
 
-createCandies.addEventListener(`click`, () => {
-  parseInt(candies.textContent++);
+createCandies.addEventListener(`click`, function createCandy() {
+  parseInt((candies.textContent += 100));
 });
 
-buyLollies.addEventListener(`click`, () => {
+buyLollies.addEventListener(`click`, function buyLolly() {
   if (candies.textContent >= 100) {
     lollies.textContent += `🍭`;
     candies.textContent -= 100;
@@ -28,15 +28,18 @@ buyLollies.addEventListener(`click`, () => {
   }
 });
 
-candyMachine.addEventListener(`click`, () => {
+candyMachine.addEventListener(`click`, function candyMach() {
   speed.textContent *= 10;
   timer();
 });
 
 function timer() {
   if (speed.textContent > 0) {
-    setInterval(() => {
+    const interval = setInterval(() => {
       candies.textContent++;
+      if (candies.textContent === `10000`) {
+        clearInterval(interval);
+      }
     }, 1000 / parseInt(speed.textContent));
   }
 }
