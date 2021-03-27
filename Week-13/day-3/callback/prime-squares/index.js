@@ -13,13 +13,13 @@ const divArray = document.querySelectorAll(`div`);
 function isPrime(div) {
   const number = parseInt(div.innerText);
   if (number === 1) {
-    return div.setAttribute(`class`, `not-prime`);
+    div.setAttribute(`class`, `not-prime`);
   } else if (number === 2) {
-    return div.setAttribute(`class`, `prime`);
+    div.setAttribute(`class`, `prime`);
   }
   for (let i = 2; i < number; i++) {
     if (number % i === 0) {
-      return div.setAttribute(`class`, `prime`);
+      div.setAttribute(`class`, `prime`);
     }
   }
   return div.setAttribute(`class`, `not-prime`);
