@@ -10,21 +10,28 @@ const body = document.querySelector(`body`);
 let counter = 0;
 let timer = 0;
 
-let timing = setInterval(() => {
-  timer++;
-  console.log(timer);
-  if (timer === 5) {
-    clearTimeout(timing);
-  }
-}, 1000);
+// let timing = setInterval(() => {
+//   timer++;
+//   console.log(timer);
+//   if (timer === 5) {
+//     clearTimeout(timing);
+//   }
+// }, 1000);
 
-button.addEventListener(`click`, () => {
+// button.addEventListener(`click`, () => {
+//   counter++;
+//   if (counter > 2 && timer === 5) {
+//     createText();
+//   }
+// });
+
+button.addEventListener(`click`, (event) => {
   counter++;
-  if (counter > 2 && timer === 5) {
+  console.log(event);
+  if (event.timeStamp > 5000 && counter > 2) {
     createText();
   }
 });
-
 function createText() {
   const h1 = document.createElement(`h1`);
   h1.textContent = `5 seconds elapsed and clicked 3 times`;
