@@ -5,26 +5,38 @@
 //   Try to solve this two different ways.
 //   hint: take a look at the button attributes https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button
 
-const time = new Date();
 const button = document.querySelector(`button`);
+//First solution
+// button.addEventListener(`click`, clicking);
 
-// First solution
-// button.addEventListener(`click`, (event) => {
+// button.addEventListener(`click`, clicking);
+
+// function clicking() {
+//   console.log(new Date());
+//   button.removeEventListener(`click`, clicking);
+// }
+
+// Seconc solution
+
+// button.addEventListener(
+//   'click',
+//   () => {
+//     console.log(new Date());
+//   },
+//   { once: true }
+// );
+
+// Third solution
 // let timeStamp = 0;
+// button.addEventListener(`click`, (event) => {
 //   if (timeStamp === 0) {
-//     console.log(time);
+//     console.log(new Date());
 //     timeStamp = event.timeStamp;
-//   } else {
-//     event.preventDefault();
 //   }
 // });
 
-// Second Solution
+// Fourth Solution
 button.addEventListener(`click`, (event) => {
-  isClicked = false;
+  console.log(new Date());
   button.setAttribute(`disabled`, true);
-  if (isClicked === false) {
-    console.log(time);
-    isClicked = true;
-  }
 });
