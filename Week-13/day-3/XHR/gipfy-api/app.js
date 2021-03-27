@@ -1,6 +1,6 @@
 `use strict`;
 
-let httpRequest = new XMLHttpRequest();
+const httpRequest = new XMLHttpRequest();
 
 httpRequest.open(
   `GET`,
@@ -16,13 +16,13 @@ httpRequest.onload = () => {
   }
 };
 
-let body = document.getElementsByTagName(`body`)[0];
+const body = document.querySelector(`body`);
 
-function image(URL, embedUrl) {
+function image(url, movingGifUrl) {
   let newImage = document.createElement(`img`);
-  newImage.setAttribute(`src`, URL);
+  newImage.setAttribute(`src`, url);
   let aTag = document.createElement('a');
-  aTag.setAttribute('href', embedUrl);
+  aTag.setAttribute('href', movingGifUrl);
   aTag.appendChild(newImage);
 
   body.appendChild(aTag);
