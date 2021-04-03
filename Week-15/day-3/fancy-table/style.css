@@ -1,0 +1,47 @@
+body {
+  background-color: #3e94ec;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  border-collapse: collapse;
+}
+
+table thead {
+  border: 1px solid black;
+}
+
+table thead tr {
+  background-color: #1b1e24;
+  border-bottom: 2px solid #9ea7af;
+  color: #d5dde5;
+}
+
+table thead tr :first-child {
+  border-right: 1px solid #c1c3d1;
+}
+
+table tbody tr th {
+  border: 1px solid #c1c3d1;
+}
+
+th {
+  padding: 10px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+[data-currency='dollar']:before {
+  content: '$ ';
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #ebebeb;
+}
