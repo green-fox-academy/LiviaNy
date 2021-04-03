@@ -35,6 +35,8 @@ button[title='blue'] {
 
 button[title='green'] {
   background-color: #17a14e;
+  box-shadow: 0px -2px 0px 0px rgba(22, 106, 64, 1) inset, 0px 2px 0px 0px rgba(85, 211, 139, 0.5) inset,
+    0px 5px 5px 0px rgba(38, 39, 78, 0.5);
 }
 
 button[title='red'] {
