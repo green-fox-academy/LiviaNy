@@ -1,0 +1,63 @@
+body {
+  background-color: #313841;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+button {
+  all: unset;
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #1c242b;
+  border-radius: 2px;
+}
+
+button:after {
+  display: none;
+  color: white;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 100%;
+  height: 30px;
+  width: 90px;
+  border-radius: 2px;
+}
+
+button:hover:after {
+  display: flex;
+}
+
+button[data-action='delete']:hover::after {
+  background-color: #f34541;
+  content: 'Delete';
+}
+
+button[data-action='confirm']:hover::after {
+  background-color: #38ba7d;
+  content: 'Sure?';
+}
+
+button[data-action='delete']:hover > .far {
+  color: #f34541;
+}
+
+button[data-action='confirm']:hover > .fas {
+  color: #38ba7d;
+}
