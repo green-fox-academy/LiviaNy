@@ -1,0 +1,66 @@
+body {
+  background-color: #ebebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#login-form {
+  background-color: #ffffff;
+  width: 300px;
+  height: 200px;
+  margin: 30px;
+  padding: 20px 50px;
+}
+
+#title {
+  margin: 0px 0px 10px;
+  font-weight: 100;
+  font-size: 1em;
+}
+
+label[for='username'],
+label[for='password'] {
+  font-size: 0.1em;
+  margin: 20px 0px 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+#forgotten {
+  font-size: 0.1em;
+  margin: 10px 0px 10px 145px;
+}
+
+button {
+  all: unset;
+  background-color: #333333;
+  color: #fcfcfc;
+  padding: 10px 0px 10px 30px;
+  cursor: pointer;
+  border: none;
+  width: 50px;
+  border-radius: 20px;
+  font-size: 0.5em;
+}
+
+input[name='username'],
+input[name='password'] {
+  width: 200px;
+  border: 0.5px solid black;
+}
+
+input:focus {
+  border: 1px solid #76a070;
+  outline: none;
+}
+
+.fas {
+  color: gray;
+  margin-left: 190px;
+  margin-top: -13px;
+  font-size: 10px;
+}
