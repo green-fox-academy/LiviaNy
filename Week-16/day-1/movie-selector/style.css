@@ -1,0 +1,36 @@
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#container {
+  width: 400px;
+  height: 200px;
+  background-color: #f4baba;
+  border-radius: 10px;
+  padding: 20px 20px 20px 90px;
+  box-shadow: 18px 21px 0px -4px #818fd1;
+}
+
+#title p {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+select {
+  appearance: none;
+  max-width: 50%;
+  padding: 0 1em 0 0;
+  margin: 0;
+  background: url(./pic/arrow.png) no-repeat 98% center;
+  background-color: white;
+  background-size: 7%;
+  border-radius: 5px;
+  height: 30px;
+  width: 160px;
+  padding: 5px;
+  border: none;
+}
