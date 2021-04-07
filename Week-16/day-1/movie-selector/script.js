@@ -5,39 +5,44 @@ const drama = document.querySelectorAll(`.drama`);
 const comedy = document.querySelectorAll(`.comedy`);
 const scifi = document.querySelectorAll(`.sci-fi`);
 const movieSelector = document.querySelector(`#movie-selector`);
-
 genres.addEventListener(`click`, (event) => {
+  reset(scifi);
+  reset(drama);
+  reset(comedy);
   if (event.target.value === `Sci-fi`) {
-    drama.forEach((movie) => {
-      movie.remove();
-    });
-    comedy.forEach((movie) => {
-      movie.remove();
-    });
+    remover(drama, comedy);
   } else if (event.target.value === `Drama`) {
-    comedy.forEach((movie) => {
-      movie.remove();
-    });
-    scifi.forEach((movie) => {
-      movie.remove();
-    });
+    remover(comedy, scifi);
   } else if (event.target.value === 'Comedy') {
-    scifi.forEach((movie) => {
-      movie.remove();
-    });
-    drama.forEach((movie) => {
-      movie.remove();
-    });
+    remover(scifi, drama);
   }
 });
 
 function remover(fistGenre, secondGenre) {
   fistGenre.forEach((movie) => {
-    movie.remove();
+    movie.style.display = `none`;
   });
   secondGenre.forEach((movie) => {
-    movie.remove();
+    movie.style.display = `none`;
   });
+}
+
+function reset(genre) {
+  genre.forEach((movie) => {
+    if (movie.style.display === `none`) {
+      movie.style.display = `block`;
+    }
+  });
+}
+
+function createElement(value, id, theClass, inner) {
+  const selectorMenu = document.querySelector(`#movie-selector`);
+  const element = document.createElement(`option`);
+  element.setAttribute(`value`, value);
+  element.setAttribute(`id`, id);
+  element.setAttribute(`class`, theClass);
+  element.textContent = inner;
+  selectorMenu.appendChild(element);
 }
 
 movieSelector.addEventListener(`click`, (event) => {
