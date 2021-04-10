@@ -11,7 +11,7 @@ body {
   display: flex;
   justify-content: center;
   justify-content: space-around;
-  padding: 0px 50px;
+  padding: 0px 50px 0px 20px;
 }
 
 h1 {
@@ -19,4 +19,60 @@ h1 {
   align-self: center;
   font-weight: 100;
   font-family: 'Lato', sans-serif;
+}
+
+#main-content {
+  display: flex;
+  flex-direction: row;
+}
+
+#main {
+  flex-grow: 4;
+  background-color: #eeeeee;
+}
+
+#sidebar {
+  background-color: #eeeeee;
+  flex-grow: 1;
+  max-width: 220px;
+}
+
+button {
+  border: none;
+  background-color: #4aa3df;
+  width: 100%;
+  color: white;
+  padding: 5px 30px;
+  font-size: 10px;
+}
+
+#sidebar-header {
+  display: flex;
+  flex-direction: row;
+  background-color: #fbfbfb;
+  margin-top: 5px;
+  font-size: 10px;
+  padding-left: 10px;
+}
+
+p:nth-child(2) {
+  color: #2980b9;
+  margin-left: 5px;
+  font-weight: 800;
+}
+
+#sidebar-content {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 5px;
+}
+
+#sidebar-content h2 {
+  margin-left: 20px;
+  font-size: 10px;
+}
+
+ul {
+  font-size: 8px;
+  padding: 10px;
 }
