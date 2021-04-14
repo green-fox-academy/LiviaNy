@@ -14,6 +14,8 @@ describe('groot endpoints', () => {
       .end((err, res) => {
         expect(err).to.be.null;
         expect(res.status).to.equal(200);
+        expect(res.body.received).to.equal(`valami`);
+        expect(res.body.translated).to.equal(`I am Groot!`);
         done();
       });
   });
