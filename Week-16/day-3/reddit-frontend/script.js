@@ -87,4 +87,4 @@ function downvoting(id, voteCount) {
 }
 
 const submit = document.querySelector(`#submit`);
-console.log(submit);
+submit.addEventListener(`click`, () => {});

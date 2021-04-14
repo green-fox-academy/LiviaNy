@@ -4,7 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="submit-style.css" />
+    <title>Reddit Submit Page</title>
   </head>
-  <body></body>
+  <body>
+    <div id="container">
+      <div id="header">
+        <div id="space">
+          <h1>S</h1>
+          <h1>P</h1>
+          <h1>A</h1>
+          <h1>C</h1>
+          <h1>E</h1>
+        </div>
+        <div id="post">
+          <p>POST TO /S/PACE</p>
+        </div>
+      </div>
+      <div id="form">
+      <form action="http://localhost:3000/posts" method="POST">
+          <label for="title">title</label>
+          <input type="text" name="title" id="title" />
+          <label for="url">URL</label>
+          <input type="text" name="url" id="url" />
+        </div>
+        <button type="submit">SUBMIT</button>
+      </form>
+    </div>
+  </body>
 </html>
