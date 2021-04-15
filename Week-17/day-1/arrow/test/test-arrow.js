@@ -26,6 +26,7 @@ describe('yondu endpoints', () => {
       .expect(400)
       .end((err, res) => {
         expect(res.status).to.equal(400);
+        expect(res.body.error).to.equal('distance and time required');
         done();
       });
   });
