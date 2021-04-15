@@ -1,8 +1,8 @@
 `use strict`;
 
-const routes = require('./routes');
+import { app } from './routes.js';
 const PORT = 3000;
 
-routes.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
