@@ -19,4 +19,14 @@ describe('yondu endpoints', () => {
         done();
       });
   });
+
+  it('GET /youndu/ without parameter status should be not ok', (done) => {
+    request(app)
+      .get('/yondu/')
+      .expect(400)
+      .end((err, res) => {
+        expect(res.status).to.equal(400);
+        done();
+      });
+  });
 });
