@@ -2,6 +2,7 @@
 
 import express from 'express';
 import mysql from 'mysql';
+import cors from 'cors';
 
 const app = express();
 const PORT = 3000;
@@ -22,8 +23,10 @@ conn.connect((err) => {
   }
 });
 
+app.use(cors());
 app.use(express.static(`public`));
 app.use(express.json());
+app.use(express.urlencoded());
 
 app.get(`/hello`, (req, res) => {
   res.send(`Hello world`);
@@ -45,9 +48,10 @@ app.post(`/posts`, (req, res) => {
   req.accepts('application/json');
   req.header(`Content-type`, `application/json`);
   const { title, url } = req.body;
+
   conn.query(`INSERT INTO post SET ?`, { title, url }, (err, result) => {
     if (err) {
-      res.sendStatus(500).json({ error: `database error` });
+      res.status(500).json({ error: `database error` });
       return;
     }
     if (title === undefined || url === undefined) {
@@ -56,6 +60,7 @@ app.post(`/posts`, (req, res) => {
       conn.query(`SELECT * FROM post WHERE id = ?`, result.insertId, (err, row) => {
         if (err) {
           res.json({ error: `database error` });
+          return;
         }
         res.status(200).json({ row });
       });
