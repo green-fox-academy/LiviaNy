@@ -31,4 +31,15 @@ describe('/drax endpoints', () => {
         done();
       });
   });
+
+  it('DELETE /drax/5', (done) => {
+    request(app)
+      .delete('/drax/5')
+      .expect(200)
+      .end((err, res) => {
+        expect(err).to.be.null;
+        expect(res.body[4]).to.be.undefined;
+        done();
+      });
+  });
 });
