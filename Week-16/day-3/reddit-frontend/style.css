@@ -47,6 +47,11 @@ h1 {
   margin-top: 10px;
 }
 
+#submit a {
+  color: white;
+  text-decoration: none;
+}
+
 #sidebar-header {
   display: flex;
   flex-direction: row;
@@ -88,12 +93,46 @@ ul {
 }
 
 .votes {
-  font-size: 5px;
+  font-size: 10px;
   margin: 0px;
   padding: 3px;
   margin-right: 10px;
+  margin-left: 1px;
 }
 
 #post-button {
   all: unset;
+}
+
+.post-button {
+  all: unset;
+  font-size: 5px;
+  padding: 5px;
+  margin: 5px;
+  color: #4aa3d9;
+}
+
+.post-button:hover {
+  color: #1f4157;
+}
+
+.upvote:active {
+  content: url('./assets/upvoted.png');
+}
+
+.downvote:active {
+  content: url('./assets/downvoted.png');
+}
+
+.post a {
+  color: #4aa3d9;
+  margin: 5px;
+}
+
+.post a:active {
+  color: #1f4157;
+}
+
+.post h2 {
+  margin: 5px;
 }

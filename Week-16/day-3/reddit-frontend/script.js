@@ -8,12 +8,30 @@ httpRequest.send();
 httpRequest.onload = () => {
   const result = JSON.parse(httpRequest.response);
   result.posts.forEach((post) => {
-    createPost(post.vote, post.title, post.id);
+    createPost(post.vote, post.title, post.id, post.url);
+  });
+
+  const deleteButton = document.getElementsByName(`remove`);
+  deleteButton.forEach((element, index) => {
+    element.addEventListener(`click`, () => {
+      const httpRequest = new XMLHttpRequest();
+      httpRequest.open(`DELETE`, `http://localhost:3000/posts/${result.posts[index].id}`);
+      httpRequest.send();
+      httpRequest.onload = () => {
+        const response = JSON.parse(httpRequest.response);
+        console.log(response);
+        console.log(result.posts[index].id);
+        const postToRemove = document.querySelector(`#the${result.posts[index].id}`);
+        console.log(postToRemove);
+        postToRemove.remove();
+      };
+    });
   });
 };
 
-function createPost(votes, postText, id) {
+function createPost(votes, postText, id, postLinkText) {
   const thePost = document.createElement(`div`);
+  thePost.setAttribute(`id`, id);
   thePost.setAttribute(`class`, `posts`);
   const voteBar = document.createElement(`div`);
   voteBar.setAttribute(`class`, `vote-bar`);
@@ -52,12 +70,24 @@ function createPost(votes, postText, id) {
   const postContent = document.createElement(`h2`);
   postContent.textContent = postText;
   post.appendChild(postContent);
+
+  const postLink = document.createElement(`div`);
+  postLink.setAttribute(`class`, `post`);
+  postLink.setAttribute(`id`, `postLink`);
+  const postLinkContent = document.createElement(`a`);
+  postLinkContent.setAttribute(`href`, postLinkText);
+  postLinkContent.textContent = postLinkText;
+  postLink.appendChild(postLinkContent);
+  post.appendChild(postLink);
+
   const modify = document.createElement(`button`);
   modify.setAttribute(`class`, `post-button`);
+  // modify.setAttribute(`id`, `modify`);
   modify.textContent = `Modify`;
   post.appendChild(modify);
   const remove = document.createElement(`button`);
   remove.setAttribute(`class`, `post-button`);
+  remove.setAttribute(`id`, `the${id}`);
   remove.textContent = `Remove`;
   post.appendChild(remove);
   post.appendChild(voteBar);
@@ -85,6 +115,3 @@ function downvoting(id, voteCount) {
     voteCount.textContent = result.row[0].vote;
   };
 }
-
-const submit = document.querySelector(`#submit`);
-submit.addEventListener(`click`, () => {});

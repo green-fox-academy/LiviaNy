@@ -22,14 +22,19 @@
         </div>
       </div>
       <div id="form">
-      <form action="http://localhost:3000/posts" method="POST">
+      <form action="http://localhost:3000/posts" method="POST" >
           <label for="title">title</label>
           <input type="text" name="title" id="title" />
           <label for="url">URL</label>
           <input type="text" name="url" id="url" />
         </div>
-        <button type="submit">SUBMIT</button>
+        <button type="submit" value="SUBMIT" onclick="backToMain()">SUBMIT</button>
       </form>
     </div>
+    <script>
+      function backToMain() {
+   window.location.href = '/Week-16/day-3/reddit-frontend/reddit.html';
+  }
+      </script>
   </body>
 </html>
