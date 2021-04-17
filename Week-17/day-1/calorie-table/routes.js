@@ -40,6 +40,17 @@ app.delete('/drax/:index', (req, res) => {
   }
 });
 
+app.put(`/drax/:index`, (req, res) => {
+  const { amount } = req.body;
+  const { index } = req.params;
+  if (!index) {
+    res.status(400).send({ error: `Please feed me some datas` });
+  } else {
+    changeAmount(index, amount);
+    res.send(calorieTable);
+  }
+});
+
 function addToList(newName, newAmount, newCalorie) {
   const newList = { name: newName, amount: newAmount, calorie: newCalorie };
   calorieTable.push(newList);
@@ -47,4 +58,9 @@ function addToList(newName, newAmount, newCalorie) {
 
 function deleteList(index) {
   calorieTable.splice(index, 1);
+}
+
+function changeAmount(index, newAmount) {
+  calorieTable[index - 1].amount = newAmount;
+  console.log(calorieTable[index].amount);
 }
