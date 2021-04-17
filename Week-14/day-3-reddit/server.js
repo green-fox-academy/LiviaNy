@@ -130,6 +130,7 @@ app.delete(`/posts/:id`, (req, res) => {
   req.accepts('application/json');
   req.header(`Content-type`, `application/json`);
   const { id } = req.params;
+  console.log(id);
   conn.query(`SELECT * FROM post WHERE id = ?;`, id, (err, result) => {
     if (err) {
       res.status(500).json({ error: `database error` });
@@ -144,7 +145,7 @@ app.delete(`/posts/:id`, (req, res) => {
         if (err) {
           res.json({ error: `database error` });
         }
-        return res.json({ result });
+        return res.status(201).json({ result });
       });
     });
   });
