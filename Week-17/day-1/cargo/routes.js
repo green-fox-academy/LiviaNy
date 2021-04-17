@@ -12,7 +12,7 @@ const actualCargo = {
 };
 
 app.get('/rocket', (req, res) => {
-  res.status(200).send(ship);
+  res.status(200).send(actualCargo);
 });
 
 app.get('/rocket/fill', (req, res) => {
@@ -22,7 +22,6 @@ app.get('/rocket/fill', (req, res) => {
     res.status(400).send({ error: 'Please feed me some data' });
   } else {
   }
-  console.log(actualCargo);
   const actualAmmo = actualCargo.caliber25 + actualCargo.caliber30 + actualCargo.caliber50;
   loadShip(caliber, actualAmmo, amount);
   res.send({
@@ -31,7 +30,6 @@ app.get('/rocket/fill', (req, res) => {
     shipStatus: actualCargo.shipstatus,
     ready: actualCargo.ready,
   });
-  console.log(actualCargo);
 });
 
 function loadShip(caliber, actualAmmo, ammoToFill) {
