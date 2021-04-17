@@ -42,4 +42,17 @@ describe('/drax endpoints', () => {
         done();
       });
   });
+
+  it('PUT /drax/1 should return status 200', (done) => {
+    request(app)
+      .put('/drax/1')
+      .expect(200)
+      .send({ amount: '1000' })
+      .end((err, res) => {
+        expect(err).to.be.null;
+        expect(res.status).to.equal(200);
+        expect(res.body[0].amount).to.equal('1000');
+        done();
+      });
+  });
 });
