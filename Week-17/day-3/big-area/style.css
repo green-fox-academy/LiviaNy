@@ -1,0 +1,48 @@
+#container {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
+  grid-template-areas: 'one two two' 'three two two' 'four five six';
+  background-color: black;
+}
+
+#container > * {
+  background-color: #b02aff;
+  padding: 20px;
+}
+
+#one {
+  grid-area: one;
+}
+
+#two {
+  grid-area: two;
+  background-color: #51d400;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#three {
+  grid-area: three;
+}
+
+#four {
+  grid-area: four;
+}
+
+#five {
+  grid-area: five;
+}
+
+#six {
+  grid-area: six;
+}
+
+#inner {
+  background-color: #ffd62a;
+  padding: 10px;
+  width: 50%;
+}
