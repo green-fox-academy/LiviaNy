@@ -1,0 +1,30 @@
+body {
+  color: #fff;
+  text-align: center;
+}
+
+#content {
+  display: grid;
+  background-color: #b02aff;
+  grid-template-columns: 20% 60% 20%;
+  grid-gap: 5px;
+  grid-template-rows: minmax(20px, auto);
+  text-align: center;
+  justify-content: center;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.element {
+  padding: 20px;
+}
+
+#left,
+#right {
+  background-color: #ffd62a;
+}
+
+#main {
+  background-color: #51d400;
+}
