@@ -1,0 +1,84 @@
+body {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+header {
+  height: 30px;
+  width: 100%;
+  background-color: #b02aff;
+  display: grid;
+  grid-template-columns: repeat(11 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas: 'one one two two two three three four four five five';
+  grid-gap: 5px;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 35%;
+}
+
+#one {
+  grid-area: one;
+}
+
+#two {
+  grid-area: two;
+}
+
+#three {
+  grid-area: three;
+}
+
+#four {
+  grid-area: four;
+}
+
+.link {
+  height: 40%;
+  background-color: #2aeaff;
+}
+
+#main {
+  height: 150px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(7, minmax(40px, auto));
+  grid-gap: 5px;
+  grid-template-areas: 'main-1 main-1 main-1 main-1 main-2 main-2 main-2 main-2' 'main-1 main-1 main-1 main-1 main-2 main-2 main-2 main-2' 'main-3 main-3 main-3 main-3 main-4 main-4 main-5 main-5' 'main-3 main-3 main-3 main-3 main-4 main-4 main-5 main-5' 'footer footer footer footer footer footer footer footer';
+  padding: 5px 20px;
+}
+
+#main-one {
+  grid-area: main-1;
+}
+
+#main-two {
+  grid-area: main-2;
+}
+
+#main-three {
+  grid-area: main-3;
+}
+
+#main-four {
+  grid-area: main-4;
+}
+
+#main-five {
+  grid-area: main-5;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #cccccc;
+}
+
+.content {
+  background-color: #51d400;
+}
