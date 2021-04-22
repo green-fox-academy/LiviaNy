@@ -5,10 +5,12 @@ const drama = document.querySelectorAll(`.drama`);
 const comedy = document.querySelectorAll(`.comedy`);
 const scifi = document.querySelectorAll(`.sci-fi`);
 const movieSelector = document.querySelector(`#movie-selector`);
+const selected = document.querySelector(`#selected`);
 genres.addEventListener(`click`, (event) => {
   reset(scifi);
   reset(drama);
   reset(comedy);
+  resetOptions();
   if (event.target.value === `Sci-fi`) {
     remover(drama, comedy);
   } else if (event.target.value === `Drama`) {
@@ -45,7 +47,15 @@ function createElement(value, id, theClass, inner) {
   selectorMenu.appendChild(element);
 }
 
+function resetOptions() {
+  selected.textContent = `The selected movie is: -`;
+  movieSelector.value = '';
+}
+
 movieSelector.addEventListener(`click`, (event) => {
-  const selected = document.querySelector(`#selected`);
-  selected.textContent = `The selected movie is: ${event.target.value}`;
+  if (event.target.value !== ``) {
+    selected.textContent = `The selected movie is: ${event.target.value}`;
+  } else {
+    selected.textContent = `The selected movie is: -`;
+  }
 });
