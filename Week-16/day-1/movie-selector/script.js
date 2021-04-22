@@ -6,7 +6,7 @@ const comedy = document.querySelectorAll(`.comedy`);
 const scifi = document.querySelectorAll(`.sci-fi`);
 const movieSelector = document.querySelector(`#movie-selector`);
 const selected = document.querySelector(`#selected`);
-genres.addEventListener(`click`, (event) => {
+genres.addEventListener(`change`, (event) => {
   reset(scifi);
   reset(drama);
   reset(comedy);
