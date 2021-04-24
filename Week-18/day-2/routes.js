@@ -1,20 +1,22 @@
 `use strict`;
 
+export const app = express();
 import express from 'express';
 import { conn } from './server.js';
-export const app = express();
-// import cors from 'cors';
+import * as path from 'path';
+import { fileURLToPath } from 'url';
 
-app.use('/', express.static('public'));
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+app.use(express.static('public'));
 app.use(express.json());
-// app.use(cors());
 
 app.get('/game', (req, res) => {
-  res.sendFile('index.html');
+  res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
 app.get('/questions', (req, res) => {
-  res.sendFile('settings.html');
+  res.sendFile(path.join(__dirname, './public/settings.html'));
 });
 
 app.get('/api/game', (req, res) => {
@@ -60,4 +62,14 @@ app.get('/api/game', (req, res) => {
       return;
     }
   );
+});
+
+app.get(`/api/questions`, (req, res) => {
+  conn.query('SELECT * FROM questions', (err, row) => {
+    if (err) {
+      res.status(500).json({ error: `database error` });
+      return;
+    }
+    res.send(row);
+  });
 });

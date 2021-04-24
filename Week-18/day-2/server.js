@@ -4,10 +4,6 @@ import { app } from './routes.js';
 const port = 3000;
 import mysql from 'mysql';
 
-app.listen(port, () => {
-  console.log(`app is running on port ${port}`);
-});
-
 export let conn = mysql.createConnection({
   host: `localhost`,
   user: `root`,
@@ -21,4 +17,8 @@ conn.connect((err) => {
     throw err;
   }
   console.log(`Connected to mysql`);
+});
+
+app.listen(port, () => {
+  console.log(`app is running on port ${port}`);
 });
