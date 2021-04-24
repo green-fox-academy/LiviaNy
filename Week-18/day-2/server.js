@@ -8,7 +8,7 @@ app.listen(port, () => {
   console.log(`app is running on port ${port}`);
 });
 
-let conn = mysql.createConnection({
+export let conn = mysql.createConnection({
   host: `localhost`,
   user: `root`,
   password: `password`,

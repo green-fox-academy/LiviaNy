@@ -18,7 +18,7 @@ INSERT INTO questions (id, question) VALUES
 (12, 'Why Europeand were scared of eating tomatoes when they were introduced??');
 
 CREATE TABLE answers (
-  id int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  ID int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   question_id int(11) NOT NULL,
   answer varchar(255) NOT NULL,
   is_correct tinyint(1) NOT NULL,
