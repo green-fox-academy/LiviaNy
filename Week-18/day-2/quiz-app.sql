@@ -21,7 +21,7 @@ CREATE TABLE answers (
   ID int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   question_id int(11) NOT NULL,
   answer varchar(255) NOT NULL,
-  is_correct tinyint(1) NOT NULL,
+  is_correct tinyint(1) NOT NULL
 );
 
 INSERT INTO answers (id, question_id, answer, is_correct) VALUES
