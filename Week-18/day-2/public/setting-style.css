@@ -1,0 +1,83 @@
+body {
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0%;
+}
+
+#manage-questions {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#delete-container,
+#new_question_container {
+  background-color: white;
+
+  border-radius: 10px;
+  display: flex;
+  padding: 50px 100px;
+  align-items: center;
+  flex-direction: column;
+}
+
+#create-questions {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.question-div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border-bottom: 1px solid grey;
+  width: 100%;
+}
+
+.delete_buttons {
+  all: unset;
+  font-weight: 600;
+  color: red;
+}
+
+h1 {
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type='text'] {
+  width: 100%;
+  margin: 5px;
+
+  padding: 5px;
+}
+
+.answer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#submit {
+  all: unset;
+  background-color: #40b3ff;
+  color: white;
+  padding: 10px;
+  width: 80px;
+  align-self: center;
+  margin-top: 60px;
+}

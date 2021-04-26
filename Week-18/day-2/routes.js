@@ -77,21 +77,20 @@ app.get(`/api/questions`, (req, res) => {
   });
 });
 
-app.delete(`api/questions/:id`, (req, res) => {
+app.delete(`/api/questions/:id`, (req, res) => {
   const { id } = req.params;
-
-  conn.query(`DELETE FROM questions WHERE ID = ?`, { id }, (err, row) => {
+  conn.query(`DELETE FROM questions WHERE ID = ?`, [parseInt(id)], (err, row) => {
     if (err) {
       res.status(500).json({ error: `database error` });
       return;
     }
-  });
-
-  conn.query(`DELETE FROM answers WHERE question_id = ?`, { id }, (err, row) => {
-    if (err) {
-      res.status(500).json({ error: `database error` });
-      return;
-    }
+    conn.query(`DELETE FROM answers WHERE question_id = ?`, [parseInt(id)], (err, row) => {
+      if (err) {
+        res.status(500).json({ error: `database error` });
+        return;
+      }
+      res.send({ done: `done` });
+    });
   });
 });
 
