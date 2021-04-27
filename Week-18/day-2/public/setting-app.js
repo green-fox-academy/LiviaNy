@@ -1,8 +1,6 @@
 `use strict`;
 
 const url = '/api/questions';
-const container = document.querySelector('#delete-container');
-const formContainer = document.querySelector(`#new_question_container`);
 
 const fetchQuestions = () => {
   fetch(url)
@@ -28,8 +26,11 @@ const fetchDelete = (id) => {
 fetchQuestions();
 createForm();
 const submit = document.querySelector('#submit');
+const container = document.querySelector('#delete-container');
 
 container.addEventListener(`click`, (event) => {
+  console.log(container);
+  console.log(event);
   fetchDelete(parseInt(event.target.id));
 });
 
@@ -48,6 +49,7 @@ function getQuestions(questions) {
     questionToDelete.textContent = question.question;
     questionDiv.appendChild(questionToDelete);
     const deleteButton = document.createElement(`button`);
+    deleteButton.setAttribute('id', `${question.ID}`);
     deleteButton.textContent = `delete`;
     deleteButton.setAttribute('class', `delete_buttons`);
     questionDiv.appendChild(deleteButton);
@@ -60,13 +62,13 @@ function clearQuestions() {
 }
 
 function clearForm() {
+  const formContainer = document.querySelector('#new_question_container');
   formContainer.textContent = '';
 }
 
 function createForm() {
-  const form = document.createElement('form');
-  form.setAttribute('action', 'http://localhost:3000/api/questions');
-  form.setAttribute('method', 'POST');
+  const formContainer = document.querySelector(`#new_question_container`);
+  const form = document.querySelector('form');
   const question = document.createElement('input');
   question.setAttribute('type', 'text');
   question.setAttribute('name', 'question');
