@@ -15,28 +15,25 @@ const fetchDelete = (id) => {
     method: 'DELETE',
   })
     .then((response) => response.json())
-    .then((myResponse) => {
-      console.log(myResponse);
-      console.log(`/api/questions/${id}`);
-    })
+    // .then((myResponse) => {
+    //   console.log(myResponse);
+    //   console.log(`/api/questions/${id}`);
+    // })
     .then(clearQuestions())
     .then(fetchQuestions());
 };
 
 fetchQuestions();
 createForm();
-const submit = document.querySelector('#submit');
-const container = document.querySelector('#delete-container');
 
+const container = document.querySelector('#delete-container');
 container.addEventListener(`click`, (event) => {
-  console.log(container);
-  console.log(event);
   fetchDelete(parseInt(event.target.id));
 });
 
+const submit = document.querySelector('#submit');
 submit.addEventListener(`click`, () => {
-  clearForm();
-  createForm();
+  fetchQuestions();
 });
 
 function getQuestions(questions) {
@@ -62,8 +59,8 @@ function clearQuestions() {
 }
 
 function clearForm() {
-  const formContainer = document.querySelector('#new_question_container');
-  formContainer.textContent = '';
+  const form = document.querySelector('form');
+  form.textContent = '';
 }
 
 function createForm() {
@@ -147,11 +144,11 @@ function createForm() {
   answerFour.appendChild(answerFourRadio);
   form.appendChild(answerFour);
 
-  const button = document.createElement('button');
-  button.setAttribute('type', 'submit');
-  button.textContent = 'SUMBMIT';
-  button.setAttribute('id', 'submit');
-  form.appendChild(button);
+  const submitButton = document.createElement('button');
+  submitButton.setAttribute('type', 'submit');
+  submitButton.textContent = 'SUMBMIT';
+  submitButton.setAttribute('id', 'submit');
+  form.appendChild(submitButton);
 
   formContainer.appendChild(form);
 }
