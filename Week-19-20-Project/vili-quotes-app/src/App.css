@@ -1,0 +1,20 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.quote-list {
+  padding-top: 20px;
+}
+
+.quote-list > .quote-of-the-day {
+  margin-bottom: 20px;
+}
