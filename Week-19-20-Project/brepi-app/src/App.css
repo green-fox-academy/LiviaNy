@@ -1,0 +1,47 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  justify-items: center;
+}
+
+.beer-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 100px;
+}
+
+.beer-tile {
+  flex-basis: 33.33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+
+.beer-tile > img {
+  border: 1px solid black;
+  max-height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.beer-tile > p {
+  min-height: 200px;
+  max-height: 200px;
+}
+.beer-tile > ul {
+  flex-basis: 100%;
+  margin-top: 20px;
+  margin-left: 25%;
+}
+
+.beer-tile > p {
+  max-width: 200px;
+}
+
+.title {
+  margin: 20px 45%;
+}
